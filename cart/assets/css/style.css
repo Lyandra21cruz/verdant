@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'popins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #e0dbd8;
+}
+
+.header{
+    width: 70%;
+    height: 80px;
+    background-color: #e0dbd8;
+    display: flex;
+    margin: 30px 0;
+    padding: 15px;
+    border-radius: 3px;
+    justify-content: space-between;
+    align-items: center;
+}
