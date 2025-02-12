@@ -241,8 +241,8 @@ footer {
          0   0 8px rgba(2, 78, 15, 0.959),
          0   0 15px rgba(83, 2, 2, 0.6),
          0   0 20px rgba(13, 102, 28, 0.712),
-         0   0 25px rgba(255, 255, 255, 0.6),  /* Brilho branco */
-         0   0 30px rgba(255, 255, 255, 0.8),  /* Brilho mais forte */
+         0   0 25px rgba(255, 255, 255, 0.6),  
+         0   0 30px rgba(255, 255, 255, 0.8),  
          0   0 40px rgba(255, 255, 255, 1),    /* Brilho máximo */
          0   0 60px rgba(255, 255, 255, 1);    /* Brilho intenso */
     transition: color 0.3s ease, text-shadow 0.3s ease; /* Adicionando transição */
@@ -254,35 +254,32 @@ input:hover {
     transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
 }
 
-/* Efeito no Button */
 button:hover {
-    background-color: #45a049; /* Cor de fundo ao passar o mouse */
-    color: #fff; /* Cor do texto */
-    transform: scale(1.05);  /* Leve aumento do botão */
-    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Transições suaves */
+    background-color: #45a049; 
+    color: #fff; 
+    transform: scale(1.05);  
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; 
 }
-/* Efeito Decorado no Subtítulo */
 .subtitulo {
     font-size: 2rem;
-    font-family: 'Cinzel', sans-serif; /* Fonte elegante */
+    font-family: 'Cinzel', sans-serif; 
     color: #fff;
     text-shadow: 
-        2px 2px 5px rgba(0, 0, 0, 0.6),    /* Sombra leve */
-        0px 0px 25px rgba(1, 112, 11, 0.945),  /* Brilho dourado */
-        0px 0px 50px rgba(244, 255, 241, 0.8);  /* Brilho intenso */
+        2px 2px 5px rgba(0, 0, 0, 0.6),    
+        0px 0px 25px rgba(1, 112, 11, 0.945),  
+        0px 0px 50px rgba(244, 255, 241, 0.8);  
     margin-bottom: 1rem;
     animation: slideInUp 1.5s ease-out;
 }
 
-/* Efeito Decorado na Descrição */
 .descricao {
     font-family: "Cinzel", monospace;
     font-size: 1.0rem;
     color: #f4f4f4;
     text-shadow: 
-        2px 2px 6px rgba(0, 0, 0, 0.4),   /* Sombra suave */
-        0px 0px 10px rgba(237, 241, 238, 0.945),  /* Toque de rosa */
-        0px 0px 20px rgba(141, 201, 126, 0.8);   /* Rosa mais forte */
+        2px 2px 6px rgba(0, 0, 0, 0.4),   
+        0px 0px 10px rgba(237, 241, 238, 0.945),  
+        0px 0px 20px rgba(141, 201, 126, 0.8);   
     opacity: 0.9;
     margin-bottom: 2rem;
     animation: slideInUp 2s ease-out;
