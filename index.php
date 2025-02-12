@@ -7,7 +7,7 @@
     <title>VERDANT</title>
 </head>       
 
-<body>
+<body class="index">
    
     <div class="overlay"></div>
     <div class="cabecalho">
@@ -31,7 +31,6 @@
     </div>
 
    
-        <br>
     </div>
 
     <footer>
