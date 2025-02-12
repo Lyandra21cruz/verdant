@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 
-
-
 .cadastro::before {
     content: "";
     position: absolute;
@@ -13,7 +11,8 @@
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: -1;
 }
-.titulo{
+
+.titulo {
     font-family: 'Cinzel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #f4f4f4;
     font-size: 38px;
@@ -26,6 +25,7 @@
          0   0 15px rgba(255, 255, 255, 0.6),
          0   0 20px rgba(255, 255, 255, 0.4); 
 }
+
 h2 {
     font-family: 'Cinzel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #f4f4f4;
@@ -65,19 +65,17 @@ h1 {
          0   0 20px rgba(255, 255, 255, 0.4); 
 }
 
-/* Resetando margens e preenchimentos padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Definindo a imagem de fundo e garantindo opacidade na tela inteira */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('img/fundo.jpg') no-repeat center center fixed;
+    background: url('img/fund.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.7); /* Deixa a imagem mais clara */
+    background-color: rgba(255, 255, 255, 0.5); 
     color: #fff;
     display: flex;
     justify-content: center;
@@ -87,29 +85,21 @@ body {
     overflow: hidden;
 }
 
-/* Overlay para adicionar o efeito de opacidade */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.3); 
     z-index: -1; 
 }
 
-/* Estilo do cabeçalho */
 .cabecalho {
     text-align: center;
     animation: fadeIn 1.5s ease-out;
 }
 
-.titulo {
-    font-size: 80px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    margin-bottom: 0.5rem;
-    animation: slideInUp 1s ease-out;
-}
 
 .subtitulo {
     font-size: 2rem;
@@ -120,16 +110,21 @@ body {
 
 .descricao {
     font-family: "Cinzel", monospace;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     opacity: 0.9;
     margin-bottom: 2rem;
     animation: slideInUp 2s ease-out;
 }
 
-/* Estilo do formulário */
+.titulo {
+    font-size: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem; /* Aumentado o espaço abaixo do título */
+    animation: slideInUp 1s ease-out;
+}
+
 .cadastro {
-    padding: 2rem;
     border: 30px solid transparent;
     border-image: url("img/download.png") 150 round;
     background-clip: padding-box;
@@ -137,41 +132,44 @@ body {
     text-align: center;
     animation: fadeIn 2s ease-out;
     width: 100%;
-    max-width: 400px; /* Limita a largura para não ficar muito largo */
+    height: 350px;
+    max-width: 400px; 
+    margin-top: 2rem; 
+    margin-left: 60px;
 }
 
-/* Formulário com campos em coluna */
 .form-container {
     display: flex;
+    color: #000;
     flex-direction: column;
-    gap: 1.5rem; /* Aumenta o espaço entre os campos */
+    gap: 1.5rem; 
 }
 
-/* Estilo dos inputs */
 input {
     padding: 1rem;
-    border: none;
+    border: solid 1px dark;
     border-radius: 8px;
     font-size: 1rem;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.2); /* fundo suave */
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #000;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 1rem; 
 }
 
 input:focus {
     background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 8px rgba(47, 117, 59, 0.63);
-    transform: scale(1.05); /* Aumenta o input ao focar */
+    box-shadow: 0 0 8px rgba(77, 167, 92, 0.822);
+    transform: scale(1.05); 
+    color: #000;
 }
 
-/* Estilo do botão */
 button {
     padding: 1rem;
     background-color: #4CAF50;
-    color: #fff;
+    color: #186409;
     font-size: 1.2rem;
     border: none;
     border-radius: 8px;
@@ -182,16 +180,15 @@ button {
 
 button:hover {
     background-color: #45a049;
-    transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+    transform: scale(1.05); 
 }
 
-/* Animações */
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -202,35 +199,91 @@ button:hover {
     }
     100% {
         transform: translateY(0);
-        opacity: 1;
+        opacity: 0;
     }
 }
 
-/* Estilo do footer */
 footer {
     position: absolute;
     bottom: 20px;
     width: 100%;
     text-align: center;
     font-size: 1rem;
-    color: #fff;
+    color: #e0e0e0;
     opacity: 0.7;
     animation: fadeIn 2.5s ease-out;
 }
-/* Estilo da logo */
+
 .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px; /* Ajuste a margem para posicionar logo de forma adequada */
+    height: 100vh; 
+    flex-direction: column; 
+    text-align: center;
 }
 
 .logo {
-    max-width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    max-width: 200px; 
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 600px; /* Espaço abaixo da logo */
+    margin-bottom: 600px; 
+}
+/* Efeito no Título */
+.titulo:hover {
+    color: #6ca031;  /* Cor ao passar o mouse */
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000, 
+         0   0 8px rgba(2, 78, 15, 0.959),
+         0   0 15px rgba(83, 2, 2, 0.6),
+         0   0 20px rgba(13, 102, 28, 0.712),
+         0   0 25px rgba(255, 255, 255, 0.6),  /* Brilho branco */
+         0   0 30px rgba(255, 255, 255, 0.8),  /* Brilho mais forte */
+         0   0 40px rgba(255, 255, 255, 1),    /* Brilho máximo */
+         0   0 60px rgba(255, 255, 255, 1);    /* Brilho intenso */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Adicionando transição */
 }
 
-/* Resto do código CSS permanece o mesmo */
+input:hover {
+    color: #000000; /* Cor do texto quando hover no input */
+    background-color: rgba(255, 255, 255, 0.4); /* Efeito no fundo */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito no Button */
+button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto */
+    transform: scale(1.05);  /* Leve aumento do botão */
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+/* Efeito Decorado no Subtítulo */
+.subtitulo {
+    font-size: 2rem;
+    font-family: 'Cinzel', sans-serif; /* Fonte elegante */
+    color: #fff;
+    text-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 0.6),    /* Sombra leve */
+        0px 0px 25px rgba(1, 112, 11, 0.945),  /* Brilho dourado */
+        0px 0px 50px rgba(244, 255, 241, 0.8);  /* Brilho intenso */
+    margin-bottom: 1rem;
+    animation: slideInUp 1.5s ease-out;
+}
+
+/* Efeito Decorado na Descrição */
+.descricao {
+    font-family: "Cinzel", monospace;
+    font-size: 1.0rem;
+    color: #f4f4f4;
+    text-shadow: 
+        2px 2px 6px rgba(0, 0, 0, 0.4),   /* Sombra suave */
+        0px 0px 10px rgba(237, 241, 238, 0.945),  /* Toque de rosa */
+        0px 0px 20px rgba(141, 201, 126, 0.8);   /* Rosa mais forte */
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    animation: slideInUp 2s ease-out;
+}
