@@ -30,6 +30,10 @@
         </div>
     </div>
 
+   
+        <br>
+    </div>
+
     <footer>
         <p>&copy; 2025 Verdant. Todos os direitos reservados. Empresa de Vendas Sustentáveis.</p>
     </footer>
