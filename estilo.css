@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+
+.cadastro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+.titulo{
+    font-family: 'Cinzel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f4f4f4;
+    font-size: 38px;
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000, 
+         0   0 8px rgba(255, 255, 255, 0.577), 
+         0   0 15px rgba(255, 255, 255, 0.6),
+         0   0 20px rgba(255, 255, 255, 0.4); 
+}
+h2 {
+    font-family: 'Cinzel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f4f4f4;
+    font-size: 38px;
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000, 
+         0   0 8px rgba(255, 255, 255, 0.577), 
+         0   0 15px rgba(255, 255, 255, 0.6),
+         0   0 20px rgba(255, 255, 255, 0.4); 
+}
+
+h1:hover {
+    color: #6ca031; 
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000, 
+         0   0 8px rgba(2, 78, 15, 0.959),
+         0   0 15px rgba(2, 83, 2, 0.6),
+         0   0 20px rgba(13, 102, 28, 0.712);
+}
+
+h1 {
+    font-family: Cormorant, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(179, 179, 179);
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000, 
+         0   0 8px rgba(255, 255, 255, 0.8), 
+         0   0 15px rgba(255, 255, 255, 0.6),
+         0   0 20px rgba(255, 255, 255, 0.4); 
+}
+
+/* Resetando margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a imagem de fundo e garantindo opacidade na tela inteira */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('img/fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.7); /* Deixa a imagem mais clara */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay para adicionar o efeito de opacidade */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: -1; 
+}
+
+/* Estilo do cabeçalho */
+.cabecalho {
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.titulo {
+    font-size: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.5rem;
+    animation: slideInUp 1s ease-out;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+    animation: slideInUp 1.5s ease-out;
+}
+
+.descricao {
+    font-family: "Cinzel", monospace;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    animation: slideInUp 2s ease-out;
+}
+
+/* Estilo do formulário */
+.cadastro {
+    padding: 2rem;
+    border: 30px solid transparent;
+    border-image: url("img/download.png") 150 round;
+    background-clip: padding-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+    width: 100%;
+    max-width: 400px; /* Limita a largura para não ficar muito largo */
+}
+
+/* Formulário com campos em coluna */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Aumenta o espaço entre os campos */
+}
+
+/* Estilo dos inputs */
+input {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2); /* fundo suave */
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 8px rgba(47, 117, 59, 0.63);
+    transform: scale(1.05); /* Aumenta o input ao focar */
+}
+
+/* Estilo do botão */
+button {
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo do footer */
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.7;
+    animation: fadeIn 2.5s ease-out;
+}
+/* Estilo da logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; /* Ajuste a margem para posicionar logo de forma adequada */
+}
+
+.logo {
+    max-width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 600px; /* Espaço abaixo da logo */
+}
+
+/* Resto do código CSS permanece o mesmo */
