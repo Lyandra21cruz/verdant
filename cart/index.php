@@ -1,4 +1,9 @@
  <?php
+//  if ($_SESSION['logado']) {
+    
+//  } else {
+//     header('location: ../');
+//  }
 ob_start();
 require('./sheep_core/config.php');
 ?>
