@@ -3,11 +3,11 @@
 class UsuarioModel {
     public $pdo;
 
-    public function criarUsuario()
+    public function criarUsuario($nome_usuario, $email, $vendedor, $admin)
     {
         global $pdo;
-        $stmt = $pdo->prepare("INSERT INTO usuarios () VALUES (?)");
-        $stmt->execute([]);
+        $stmt = $pdo->prepare("INSERT INTO usuarios (nome_usuario, email, vendedor, admin) VALUES (?)");
+        $stmt->execute([$nome_usuario, $email, $vendedor, $admin]);
     }
     
     public function editarUsuario($id){
