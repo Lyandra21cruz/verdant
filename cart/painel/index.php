@@ -1,18 +1,5 @@
 <?php
 
-/**********************************************************************
- * ********************************************************************
- * CAMADA PRINCIPAL MAYKONSILVEIRA.COM.BR E MAYKON SILVEIRA
- * 
- * ********************************************************************
-* MAYKONSILVEIRA.COM.BR DEREICIONANDO VOCÊ PARA O CAMINHO DO SUCESSO #*
- * *************MAYKON***SILVEIRA**************************************
- * *************sheep**TECHNOLOGIES***********************************
- * ********************************************************************
- *
- * ********************************************************************
- * ********************************************************************
- */
 ob_start();
 require('../sheep_core/config.php');
 ?>
@@ -22,7 +9,7 @@ require('../sheep_core/config.php');
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Maykon Silveira</title>
+        <title>Verdant</title>
         <link rel="stylesheet" href="assets/css/app.min.css">
       
         <link rel="stylesheet" href="assets/css/style.css">
@@ -77,11 +64,11 @@ require('../sheep_core/config.php');
                             
                           
                           <tr>
-                            <td>7</td>
-                            <td><img src="assets/img/sem-imagem.png" alt="" style="width:50px;"></td>
+                            <td></td>
+                            <td><img src="assets/img/sem-imagem" alt="" style="width:50px;"></td>
                             <td><?= date('d/m/Y') ?></td>
-                            <td>Cursos Maykon</td>
-                            <td>R$ 77</td>
+                            <td></td>
+                            <td></td>
                                                    
                             <td><a href="" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a></td>
                             <td>
@@ -102,7 +89,7 @@ require('../sheep_core/config.php');
               </div>
             </div>
           
-      <!-- fim TABELA  MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA -->
+      <!-- fim TABELA -->
       </section>
       </div>
         
