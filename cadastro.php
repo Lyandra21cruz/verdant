@@ -17,7 +17,7 @@
     </div>
 <br><br>
     <div class="cadastro">
-        <h1>LOGIN</h1>
+        <h1>CADASTRAR</h1>
         <div class="form-container">
             <form method="POST">
                 <input type="text" name="nome_usuario" placeholder="Nome" required>
@@ -27,7 +27,7 @@
                 <input type="password" name="senha" placeholder="Senha" required>
                 <button type="submit">CADASTRAR</button>
                 <br>
-                <b><a href="cadastro.php">Criar Conta</a></b>
+                <b><a href="index.php">VOLTAR</a></b>
             </form>
         </div>
     </div>

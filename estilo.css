@@ -34,12 +34,13 @@ h2 {
     text-shadow: 
         -1px -1px 0 #000, 
          1px -1px 0 #000, 
-        -1px  1px 0 #000, 
+        -1px  1px 0 #a5a5a5, 
          1px  1px 0 #000, 
-         0   0 8px rgba(255, 255, 255, 0.577), 
-         0   0 15px rgba(255, 255, 255, 0.6),
-         0   0 20px rgba(255, 255, 255, 0.4); 
+         0   0 10px rgba(255, 255, 255, 0.8), /* Aumentando o brilho */
+         0   0 20px rgba(255, 255, 255, 0.9), /* Aumentando o brilho */
+         0   0 30px rgba(255, 255, 255, 0.7); /* Aumentando o brilho */
 }
+
 h1:hover {
     color: #6ca031; 
     text-shadow: 
@@ -118,17 +119,21 @@ h1 {
 
 .cadastro {
     border: 30px solid transparent;
-    border-image: url("public/css/img/download.png") 150 round;
+    border-image: url("public/css/img/borda.png") 150 round;
     background-clip: padding-box;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     text-align: center;
     animation: fadeIn 2s ease-out;
     width: 100%;
-    height: 350px;
+    height: 360px;
     color: #000;
     max-width: 400px; 
     margin-top: 2rem; 
     margin-left: 60px;
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 .form-container {
     display: flex;
@@ -214,19 +219,24 @@ footer {
 }
 .logo-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh; 
-    flex-direction: column; 
-    text-align: center;
 }
+
 .logo {
-    max-width: 200px; 
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 600px; 
+    height: 90px; 
+    width: 190px;
 }
+
+.brand-name {
+    font-size: 38px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    flex-grow: 1;
+    text-align: center;
+    font-family: "Cinzel","Arial", sans-serif;
+}
+
 .titulo:hover {
     color: #6ca031;  
     text-shadow: 
@@ -284,20 +294,7 @@ button:hover {
     background-color: #e0dbd8
 ;
 }
-/* Header e ícone de hambúrguer */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 180px;
-    background-image:url(public/css/img/VERDANTas.png);
-    filter: blur(00.3s);
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 0 20px;
-}
+
 
 .logo-container {
     display: flex;
@@ -305,7 +302,8 @@ button:hover {
 }
 
 .logo {
-    width: 50px;
+    width: 260px;
+    height: 250px;
     margin-right: 10px;
 }
 
@@ -373,14 +371,15 @@ button:hover {
     background: #3cb371;
 }
 
-/* Outros estilos */
 .carousel {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
+    width: 90%;
+    max-width: 1400px;
+    height: 600px; 
+    margin: 30px auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-container {
@@ -390,8 +389,92 @@ button:hover {
 
 .carousel img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
+
+/* Botões de Navegação */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Indicadores */
+.indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicators div {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.indicators .active {
+    background: white;
+    width: 14px;
+    height: 14px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    background: url('public/css/img/fundo.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 0 20px;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Camada escura para opacidade */
+    z-index: 0;
+}
+
+.header * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .prev, .next {
     position: absolute;
@@ -458,7 +541,7 @@ font-family: Noto Serif
 ;
 }
 footer {
-    background: #1f3b2b;
+    background: #203518;
     color: white;
     text-align: center;
     padding: 20px;
@@ -552,6 +635,7 @@ footer {
     color: #3cb371;
     text-align: center;
     position: relative;
+    font-family: Lora, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -593,14 +677,16 @@ footer {
 }
 
 .mission-vision-values .card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px; /* Bordas arredondadas */
+    background: transparent; /* Fundo transparente */
+    border: 4px solid #367050; /* Borda sólida com cor verde */
     padding: 30px;
     text-align: center;
     margin: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 300px;
     flex: 1;
+    position: relative;
 }
 
 .mission-vision-values .card:hover {
@@ -610,14 +696,14 @@ footer {
 
 .mission-vision-values .card i {
     font-size: 50px;
-    color: #3cb371;
+    color: #207044;
     margin-bottom: 20px;
 }
 
 .mission-vision-values .card h3 {
     font-size: 1.6em;
     font-weight: 600;
-    color: #2e8b57;
+    color: #1e7244;
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
@@ -637,4 +723,51 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.benefit i {
+    font-family: Lora, monospace;
+    font-size: 30px;
+    color: #90bb91;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    background: url('public/css/img/fundo.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 0 20px;
+}
+
+.header .logo-container {
+    position: absolute; /* Coloca a logo à esquerda */
+    left: 20px; /* Ajuste conforme necessário */
+}
+
+.header .titulo {
+    text-align: center; /* Garante que o texto esteja centralizado */
+    font-size: 38px; /* Ajuste conforme necessário */
+}
+
+.menu-icon {
+    position: absolute; /* Posiciona o ícone de menu à direita */
+    right: 20px; /* Ajuste conforme necessário */
 }

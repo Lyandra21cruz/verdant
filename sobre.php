@@ -9,16 +9,18 @@
 </head>
 <body class="sobre">
 
-<header class="header">       
+<header class="header">
     <div class="logo-container">
-        <img src="public/css/img/logo.png" alt="Verdant Logo" class="logo">
+        <img src="public/css/img/download.png" alt="Verdant Logo" class="logo">
     </div>
+    <h2 class="brand-name">VERDANT</h2>
     <div class="menu-icon" onclick="toggleMenu()">
         <div></div>
         <div></div>
         <div></div>
     </div>
 </header>
+
 
 <div class="menu">
     <a href="index.php">Início</a>
@@ -28,33 +30,20 @@
     <a href="../../index.php">Carrinho</a>
     <a href="#">Loja</a>
 </div>
-<br><br>
+<br>
 <div class="carousel">
+    <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
     <div class="carousel-container" id="carousel">
-        <img src="public/css/img/2.jpg" alt="Imagem 1">
-        <img src="public/css/img/3.jpg" alt="Imagem 2">
-        <img src="public/css/img/4.jpg" alt="Imagem 3">
-        <img src="public/css/img/5.jpg" alt="Imagem 4">
+        <img src="public/css/img/7.jpg" alt="Imagem 1">
+        <img src="public/css/img/2.jpg" alt="Imagem 2">
+        <img src="public/css/img/9.jpg" alt="Imagem 3">
+        <img src="public/css/img/6.jpg" alt="Imagem 4">
     </div>
+    <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+    <div class="indicators"></div>
 </div>
 
-<script>
-    function toggleMenu() {
-        document.querySelector('.menu').classList.toggle('active');
-    }
 
-    let currentIndex = 0;
-    function moveSlide() {
-        const carousel = document.getElementById("carousel");
-        const images = carousel.children;
-        const totalImages = images.length;
-        currentIndex = (currentIndex + 1) % totalImages;
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-    setInterval(moveSlide, 3000);
-</script>
-
-<img src="public/css/img/flor.png" alt="Flor" class="center-image">
 
 <section class="about">
     <h2>Quem Somos</h2>
@@ -62,21 +51,43 @@
         Criamos soluções ecológicas para um mundo melhor, trazendo produtos naturais e sustentáveis para o dia a dia.</p>
 </section>
 
+
 <section class="mission-vision-values">
     <div class="card">
         <i class="fas fa-globe"></i>
-        <h3>Missão</h3>
+        <h3>MISSÃO</h3>
         <p>Promover um mundo sustentável por meio de produtos ecológicos e responsáveis.</p>
     </div>
     <div class="card">
         <i class="fas fa-eye"></i>
-        <h3>Visão</h3>
+        <h3>VISÃO</h3>
         <p>Ser referência global em soluções sustentáveis para um planeta melhor.</p>
     </div>
     <div class="card">
         <i class="fas fa-heart"></i>
-        <h3>Valores</h3>
+        <h3>VALORES</h3>
         <p>Respeito ao meio ambiente, ética e inovação contínua.</p>
+    </div>
+</section>
+
+<section class="about">
+    <h2>Por que Escolher a Verdant?</h2>
+    <div class="benefits">
+        <div class="benefit">
+            <i class="fas fa-leaf"></i>
+           <b> <h3>100% SUSTENTÁVEL</h3></b>
+            <p>Nossos produtos são feitos com materiais recicláveis e orgânicos.</p>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-recycle"></i>
+            <b><h3>IMPACTO POSITIVO</h3></b>
+            <p>Apoiamos projetos ambientais e comunidades locais.</p>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-star"></i>
+           <b> <h3>QUALIDADE GARANTIDA</h3></b>
+            <p>Produtos testados e aprovados para um consumo consciente.</p>
+        </div>
     </div>
 </section>
 
@@ -96,6 +107,16 @@
         menuIcon.classList.toggle('active');
         menu.classList.toggle('active');
     }
+
+    let currentIndex = 0;
+    function moveSlide() {
+        const carousel = document.getElementById("carousel");
+        const images = carousel.children;
+        const totalImages = images.length;
+        currentIndex = (currentIndex + 1) % totalImages;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    setInterval(moveSlide, 3000);
 </script>
 
 </body>

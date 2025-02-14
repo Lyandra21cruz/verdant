@@ -1,25 +1,48 @@
 body {
-        
-    background-repeat: no-repeat;
-    background-color: #e0dbd8
-    ;
+    background-color: #e0dbd8; /* Cor clara de fundo */
     background-size: cover;
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 2s ease-out; /* Efeito de transição de entrada */
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Largura da linha verde */
+    background-color: #4CAF50; /* Cor da linha verde */
+    animation: lineAnimation 2s ease-out infinite; /* Animação da linha */
     
 }
 
 .tituloprincipal {
     font-size: 50px;
     text-align: center;
-     color: rgb(46, 44, 44);
+    color: rgb(46, 44, 44);
+    margin-top: 50px;
+    animation: titleAnimation 1s ease-out;
+}
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
     border-radius: 50%;
-    background-color: rgb(40, 82, 40);
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +51,18 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
-    
+    animation: containerAnimation 2s ease-out;
+}
+
+@keyframes containerAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .titulo {
@@ -42,63 +76,187 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centraliza verticalmente */
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 15%;
-    left: 0;
+    height: 100vh; /* Faz a seção ocupar toda a tela */
+    position: relative;
 }
 
 .principal {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 320px;
-    
-}
-
-.input {
-    margin-bottom: 10px;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    gap: 25px; /* Espaçamento entre os campos */
+    border: 30px solid transparent;
+    border-image: (url(../../public/css/img/borda.png)) 150 round;
+    background-clip: padding-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeIn 2s ease-out;
     width: 100%;
+    height: 350px;
+    color: #000;
+    max-width: 400px; /* Mantém a largura máxima para não esticar demais */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.borda {
-    border-radius: 40px;
-    border: 2px solid black;
-    background-color: rgb(77, 128, 77);
-    color: black;
+/* Ajuste para os campos dentro da .principal */
+.input, .borda {
+    width: 90%; /* Ajuste para não encostar nas bordas */
     padding: 10px;
-    width: 80%;
-    font-size: 18px;
-    align-items: center;
-    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    text-align: center; /* Garante que o texto dentro do input fique centralizado */
 }
 
-.borda::placeholder{
-    color: white;
+.input:focus, .borda:focus {
+    border-color: #4CAF50;
+    background-color: #e6f7e6;
 }
 
-
+/* Botão */
 .venda-button {
-    text-decoration: none;
+    width: 90%;
     background-color: #4CAF50;
-    color: white ;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
     text-align: center;
-    width: 100%;
-    margin-top: 20px;
 }
-.cabeça{
-    border-radius: 50px;
-    background-color: #4CAF50;
-    width: 400px;
-    height: 400px;
+
+.venda-button:hover {
+    background-color: #59a04b;
+    transform: translateY(-3px);
+}
+
+.header {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 180px;
+    background-image: url('VERDANT.jpg'); /* Background da imagem */
+    filter: blur(0.3s);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-out; /* Animação suave */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 3px;
+    background: rgb(159, 179, 115);
+    margin: 5px 0;
+    transition: 0.3s ease;
+}
+
+.menu-icon.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-icon.active {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    background: rgba(16, 39, 25, 0.9);
+    text-align: left;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #3cb371;
+    transform: translateX(10px); /* Efeito de deslizar ao passar o mouse */
+}
+
+footer {
+    background: #485f3f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 900px; /* Remova essa linha */
+    position: relative;
+    font-size: 14px;
+}
+
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lineAnimation {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
 }
