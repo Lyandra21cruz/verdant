@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feed.css">
+    <title>Document</title>
+</head>
+
+
+<header class="feed">
+    <div class="curved-text" id="curvedText"></div>
+
+
+
+
+
+
+
+
+
+    <script>
+        const text = "VERDANT";
+        const container = document.getElementById("curvedText");
+        const radius = -150;
+        const angleStep = 180 / text.length;
+
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement("span");
+            span.innerText = text[i];
+            const angle = i * angleStep;
+            const x = Math.cos((angle * Math.PI) / 180) * radius;
+            const y = Math.sin((angle * Math.PI) / 180) * radius;
+            span.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+            container.appendChild(span);
+        }
+    </script>
+
+
+
+
+    <div class="bola">
+        <h2>
+            FEEDBACKS
+        </h2>
+    </div>
+
+
+</header>
+<section>
+
+    <div class="container">
+        <div class="form">
+            <form action="">
+                <div> <input type="text" name="nome" placeholder="NOME"></div>
+                <div><input type="email" name="email" placeholder="EMAIL"></div>
+                <div><input type="text" name="comentario" placeholder="COMENTÁRIO"></div>
+
+                <div class="buto">
+                    <button>ENVIAR</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+</body>
+
+</html>
