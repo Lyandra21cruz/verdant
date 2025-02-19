@@ -11,7 +11,7 @@
                     <ul class="nav nav-pills">
                     
                       <li class="nav-item">
-                        <a class="nav-link active" href="<?=HOME?>/index.php" target="_blank">LOJA</a>
+                        <a class="nav-link active" href="http://localhost/verdant/cart/index.php" target="_blank">LOJA</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="index.php">Listar</a>
