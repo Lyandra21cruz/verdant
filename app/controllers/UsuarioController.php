@@ -1,10 +1,13 @@
-<?php 
-require_once "C:\Turma2\xampp\htdocs\verdant\app\models\UsuarioModel.php";
+<?php
 
-class UsuarioController {
+require_once __DIR__.'/../models/UsuarioModel.php';
+
+class UsuarioController
+{
 
     public $usuarioModel;
-    public function __construct() {
+    public function __construct()
+    {
         $this->usuarioModel = new UsuarioModel();
     }
 
@@ -12,13 +15,20 @@ class UsuarioController {
     {
         $this->usuarioModel->criarUsuario($nome_usuario, $email, $vendedor, $admin);
     }
-    
-    public function editarUsuario($id){
+
+    public function editarUsuario($id)
+    {
         $this->usuarioModel->editarUsuario($id);
     }
 
-    public function deletarUsuario($id){
+    public function deletarUsuario($id)
+    {
         $this->usuarioModel->deletarUsuario($id);
+    }
+
+    public function entrarUsuario($email, $senha)
+    {
+        $this->usuarioModel->entrarUsuario($email, $senha);
     }
 
 

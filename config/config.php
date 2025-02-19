@@ -1,15 +1,25 @@
 <?php
-try {
-$dsn = "mysql:host=localhost;dbname=verdant;charset=utf8mb4";
-$usuario = "root";
-$senha = "";
-$opcoes = [
-PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-PDO::ATTR_EMULATE_PREPARES => false,
-];
-$pdo = new PDO($dsn, $usuario, $senha, $opcoes);
-} catch (PDOException $e) {
-die("Erro na conexão: " . $e->getMessage());
+class Config
+{
+    // Conexão com banco de dados
+    private $servername = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $db_name = "verdant";
+
+    public $pdo;
+
+    public function getConnection()
+    {
+        $this->pdo = null;
+
+        try {
+            $this->pdo = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->db_name, $this->username, $this->password);
+            $this->pdo->exec("set names utf8");
+        } catch (PDOException $exception) {
+            echo "Connection error: " . $exception->getMessage();
+        }
+
+        return $this->pdo;
+    }
 }
-?>
