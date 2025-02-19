@@ -10,23 +10,23 @@
 <body class="sobre">
 <header class="header">
     <div class="logo-container">
-        <img src="public/css/img/download.png" alt="Verdant Logo" class="logo">
+      <a href="index.php">  <img src="public/css/img/download.png" alt="Verdant Logo" class="logo"></a>
     </div>
     <h2 class="brand-name">VERDANT</h2>
     <div class="menu-icon" onclick="toggleMenu()">
         <div></div>
+        <div></div><a href="carrinho.php"><img src="public/css/img/carrinho.png" alt="" width= "90px"></a>
         <div></div>
-        <div></div>
-    </div>
+    </div>        
+
 </header>
 <div class="menu">
-    <a href="index.php">Início</a>
-    <a href="sobre.php">Sobre</a>
-    <a href="#">Venda</a>
-    <a href="#">Feedbacks</a>
-    <a href="../../index.php">Carrinho</a>
-    <a href="#">Loja</a>
-</div>
+        <a href="cart/index.php">INÍCIO</a>
+        <a href="sobre.php">EMPRESA</a>
+        <a href="verdantp/compra/index.php">VENDA</a>
+        <a href="verdantp/compra/feedback.php">FEEDBACKS</a>
+    </div>
+    <div class="linha-verde"></div>
 <br>
 <div class="carousel">
     <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>

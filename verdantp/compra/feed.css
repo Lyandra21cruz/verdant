@@ -1,152 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    font-family: Cormorant, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(100, 155, 94);
-    text-align: center;
-    font-size: 40px;
-    text-shadow: 
-        -1px -1px 0 #000, 
-         1px -1px 0 #000, 
-        -1px  1px 0 #000, 
-         1px  1px 0 #000, 
-         0   0 8px rgba(255, 255, 255, 0.8), 
-         0   0 15px rgba(255, 255, 255, 0.6),
-         0   0 20px rgba(255, 255, 255, 0.4); 
-}
 body {
     background-color: #e0dbd8;
     color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-.container {
-    width: 50%;
-    margin: 4rem auto;  /* Distância maior do header */
-    background-color: #e4e4e4c9;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    border-image:url(../../public/css/img/borda.png) 150 round;
-    background-clip: padding-box;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);;
+    text-align: center;
 }
 
 h2 {
-    margin-bottom: 1.5rem;
-    color: #28a745;
-    font-weight: bold;
-    font-size: 2rem;
+    font-family: 'Cinzel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f4f4f4;
+    font-size: 38px;
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #a5a5a5, 
+         1px  1px 0 #000, 
+         0   0 10px rgba(255, 255, 255, 0.8),
+         0   0 20px rgba(255, 255, 255, 0.9),
+         0   0 30px rgba(255, 255, 255, 0.7);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-label {
-    font-size: 1rem;
-    font-weight: 500;
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #666;
+.logo {
+    width: 260px;
+    height: 250px;
+    margin-right: 10px;
 }
 
-input, select {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #f4f4f4;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, select:focus {
-    border-color: #28a745;
-    outline: none;
-}
-
-button.btn-comprar {
-    background-color: #28a745;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
-    width: 100%;
-}
-
-button.btn-comprar:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
-
-/* Ajustes para as Informações Fora do Container */
-.extra-info {
-    margin-top: 3rem;
-    padding: 1.5rem;
-    background-color: #fff;
-    color: #666;
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+.feedback-list {
+    margin-top: 20px;
     text-align: left;
 }
 
-.extra-info h3 {
-    color: #28a745;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+.feedback {
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.extra-info p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
+.feedback h3 {
+    color: #2e7d32;
+    margin-bottom: 5px;
 }
 
-.extra-info ul {
-    list-style: none;
-    padding-left: 0;
+.feedback small {
+    color: #777;
+    font-size: 12px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adicionando sombra elegante */
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-.extra-info li {
-    margin: 0.8rem 0;
+.container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
 }
 
-.extra-info li span {
-    font-weight: 600;
-    color: #28a745;
+/* Efeito de brilho nos campos do formulário */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Ajustes de Responsividade */
-@media (max-width: 768px) {
-    .container {
-        width: 80%;
-        margin-top: 2rem;
-    }
-
-    button.btn-comprar {
-        width: 100%;
-    }
-
-    .extra-info {
-        margin-top: 2rem;
-        padding: 1rem;
-    }
+form input:focus, form textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7); /* Efeito de brilho */
+    outline: none;
 }
 .header {
     position: relative;
@@ -452,7 +435,7 @@ h2 {
          1px -1px 0 #000, 
         -1px  1px 0 #a5a5a5, 
          1px  1px 0 #000, 
-         0   0 10px rgba(255, 255, 255, 0.8), /* Aumentando o brilho */
-         0   0 20px rgba(255, 255, 255, 0.9), /* Aumentando o brilho */
-         0   0 30px rgba(255, 255, 255, 0.7); /* Aumentando o brilho */
+         0   0 10px rgba(255, 255, 255, 0.8), 
+         0   0 20px rgba(255, 255, 255, 0.9), 
+         0   0 30px rgba(255, 255, 255, 0.7); 
 }
