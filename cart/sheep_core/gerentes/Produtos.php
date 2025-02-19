@@ -22,7 +22,7 @@ class Produtos
                 $enviaFoto = new Uploads('../../uploads/');
                 $enviaFoto->Image($this->Data['capa'], date('Y-m-d').time());
              }
-             if(isset($enviaFoto) && $enviaFoto->getResult()){
+             if(isset($enviaFoto)){
                 $this->Data['capa'] = $this->Data['capa'] != null ?  $enviaFoto->getResult() : null;
                 
                     $this->Banco();
@@ -63,10 +63,10 @@ class Produtos
     {
         $criar = new Criar();
         $criar->Criacao(self::BD, $this->Data);
-        if(!$criar->getResultado()){
-            $this->Resultado = false;
-        }else{
+        if($criar->getResultado()){
             $this->Resultado = true;
+        }else{
+            $this->Resultado = false;
         }
     }
 
