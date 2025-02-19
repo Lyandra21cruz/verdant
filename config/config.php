@@ -1,6 +1,6 @@
 <?php
 try {
-$dsn = "mysql:host=localhost;dbname=revisao;charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=verdant;charset=utf8mb4";
 $usuario = "root";
 $senha = "";
 $opcoes = [

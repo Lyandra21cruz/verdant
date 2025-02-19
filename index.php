@@ -25,16 +25,12 @@
                 <input type="email" name="email" placeholder="Email" required>
                 <br>
                 <input type="password" name="senha" placeholder="Senha" required>
-                <button type="submit">ENTRAR</button>
+                <button type="submit">CADASTRAR</button>
+                <br>
+                <b><a href="cadastro.php">Criar Conta</a></b>
             </form>
         </div>
     </div>
-
-   
     </div>
-
-    <footer>
-        <p>&copy; 2025 Verdant. Todos os direitos reservados. Empresa de Vendas Sustentáveis.</p>
-    </footer>
 </body>
 </html>
