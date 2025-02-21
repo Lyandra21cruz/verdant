@@ -17,7 +17,7 @@
     <h2 class="brand-name">VERDANT</h2>
     <div class="menu-icon" onclick="toggleMenu()">
         <div></div>
-        <div></div><a href="carrinho.php"><img src="public/css/img/carrinho.png" alt="" width= "90px"></a>
+        <div></div><a href="carrinho.php"><i class="fa-solid fa-cart-shopping fa-2xl" style='color: #fff';></i></a>
         <div></div>
     </div>        
 

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ?> 
     <?php
     $controller = new UsuarioController();
-    $controller->criarUsuario($_POST['nome_usuario'], $_POST['email'], $_POST['senha'], 0, 0);
+    $controller->entrarUsuario($_POST['email'], $_POST['senha']);
 }
 ?>
 <!DOCTYPE html>
@@ -38,15 +38,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1>CADASTRAR</h1>
         <div class="form-container">
             <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                <input type="text" name="nome_usuario" placeholder="Nome" required>
-                <br>
                 <input type="email" name="email" placeholder="Email" required>
                 <br>
                 <input type="password" name="senha" placeholder="Senha" required>
                 <br>
-                <button type="submit">CADASTRAR</button>
+                <button type="submit">Entrar</button>
                 <br>
-                <div class="back-to-login"><b><a href="login.php">Já tem uma conta? Clique aqui para entrar</a></b>
+                <div class="back-to-login"><b><a href="cadastro.php">Não tem uma conta? Clique aqui para cadastrar</a></b>
                 </div>
             </form>
         </div>
