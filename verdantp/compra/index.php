@@ -18,7 +18,7 @@
     </div>
     <h1 class="brand-name">VERDANT</h1>
     <div class="menu-icon" onclick="toggleMenu()">
-        <div></div>        <div></div><a href="carrinho.php"><img src="../../public/css/img/carrinho.png" alt="" width= "90px"></a>
+        <div></div>        <div></div><a href="../../carrinho.php"><img src="../../public/css/img/carrinho.png" alt="" width= "90px"></a>
 
         <div></div>
         <div></div>

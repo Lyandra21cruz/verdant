@@ -21,7 +21,7 @@
     <div class="menu-icon" onclick="toggleMenu()">
         <div></div>
         <div></div>
-        <a href="carrinho.php">
+        <a href="../../carrinho.php">
             <img src="../../public/css/img/carrinho.png" alt="Carrinho" width="90px">
         </a>
         <div></div>
