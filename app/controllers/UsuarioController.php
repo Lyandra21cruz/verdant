@@ -30,6 +30,11 @@ class UsuarioController
     {
         $this->usuarioModel->entrarUsuario($email, $senha);
     }
+    
+    public function permissaoUsuario($id)
+    {
+        return $this->usuarioModel->permissaoUsuario($id);
+    }
 
 
 }
