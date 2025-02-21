@@ -136,7 +136,7 @@ section {
     flex-direction: column; /* Coloca imagem e título em coluna */
     align-items: center; /* Centraliza os itens */
     background: rgb(235, 235, 235); /* Fundo branco para o card */
-    border: 30px solid transparent;
+    border: 2px solid #669668;
     background-clip: padding-box;    border-radius: 10px; /* Bordas arredondadas */
     padding: 10px; /* Espaçamento interno */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
