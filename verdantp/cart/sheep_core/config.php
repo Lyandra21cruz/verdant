@@ -46,7 +46,7 @@ date_default_timezone_set('America/Sao_Paulo');
  */
 
 //configurações do bando de dados
-define('SHEEP_URL', 'localhost/s1/cart');//ou dominio exemplo: maykonsilveira.com.br
+define('SHEEP_URL', 'localhost/verdant/cart');//ou dominio exemplo: maykonsilveira.com.br
 define('SHEEP_HOST','localhost');
 define('SHEEP_USER','root');
 define('SHEEP_SENHA','');

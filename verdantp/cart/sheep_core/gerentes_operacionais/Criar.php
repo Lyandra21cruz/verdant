@@ -27,7 +27,7 @@ class Criar extends Conexao {
     /**
      * <b>ExeCriar</b> Executa um cadastro simplificado no banco de dados com prepared statements
      * Basta informar o nome da tabela e um array atribuitivo com o nome da coluna e valor.
-     * @param STRING $Tabela INFORME O NOME DA TABELA
+     * @param string $Tabela INFORME O NOME DA TABELA
      * @param ARRAY  $Dados INFORME UM ARRAY ATRIBUITIVO ( 'NOME DA COLUNA' => 'VALOR' )
      * 
      * NÃO ACEITAMOS PIRATARIA É CRIME 
