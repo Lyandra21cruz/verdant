@@ -74,282 +74,263 @@ session_start();
                 </div>
 
             </div>
-
-            <div class="corpoproduto">
-                <div class="imgproduto">
-                    <img src="verdantp/public/img/produto-2.jpg" alt="Vela Dalit" class="produtominiatura">
-                </div>
-                <div class="titulo">
-                    <p>Vela Dalit</p>
-                    <h2>R$17,20</h2>
-                </div>
-                <div class="descricao">
-                    <p>Vela artesanal feita com cera natural e aromas relaxantes. Perfeita para criar um ambiente
-                        aconchegante.</p>
-                </div>
-                <div class="botoes-container">
-                    <a href="../verdantp/compra/index.php">
-                        <button class="btn-comprar">Comprar</button>
-                    </a>
-                    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
-                        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                    </a>
-                </div>
+        
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produto-2.jpg" alt="Vela Dalit" class="produtominiatura">
             </div>
-
-            <div class="corpoproduto">
-                <div class="imgproduto">
-                    <img src="verdantp/public/img/produto-3.jpg" alt="Mini Estufa" class="produtominiatura">
-                </div>
-                <div class="titulo">
-                    <p>Mini Estufa</p>
-                    <h2>R$2.500</h2>
-                </div>
-                <div class="descricao">
-                    <p>Ideal para quem deseja cultivar plantas em casa com controle de temperatura e umidade.</p>
-                </div>
-                <div class="botoes-container">
-                    <a href="../verdantp/compra/index.php">
-                        <button class="btn-comprar">Comprar</button>
-                    </a>
-                    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
-                        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                    </a>
-                </div>
+            <div class="titulo">
+                <p>Vela Dalit</p>
+                <h2>R$17,20</h2>
             </div>
+            <div class="descricao">
+                <p>Vela artesanal feita com cera natural e aromas relaxantes. Perfeita para criar um ambiente aconchegante.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
+        
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produto-3.jpg" alt="Mini Estufa" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Mini Estufa</p>
+                <h2>R$2.500</h2>
+            </div>
+            <div class="descricao">
+                <p>Ideal para quem deseja cultivar plantas em casa com controle de temperatura e umidade.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div></div>
+
+  <!--- PRODUTOS 2 --->
+  <div class="container">
+    <div class="linha-produtos">
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produto-4.jpg" alt="Lápis de Semente" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Lápis de Semente</p>
+                <h2>R$1,05</h2>
+            </div>
+            <div class="descricao">
+                <p>Após o uso, plante o lápis e veja crescer uma linda planta. Feito com materiais biodegradáveis.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
+        
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produto-5.jpg" alt="Kit Auto Cuidado Naturalvegan" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Kit Auto Cuidado Naturalvegan</p>
+                <h2>R$50,00</h2>
+            </div>
+            <div class="descricao">
+                <p>Kit especial com produtos naturais para um autocuidado completo. Livre de químicos agressivos.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
+
+        
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produto-6.jpg" alt="Kit Sabonete e Bucha Natural" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Kit Sabonete e Bucha Natural</p>
+                <h2>R$37,00</h2>
+            </div>
+            <div class="descricao">
+                <p>Sabonete artesanal e bucha vegetal para um banho relaxante e ecológico.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
         </div>
-
-        <!--- PRODUTOS 2 --->
-        <div class="container">
-            <div class="linha-produtos">
-                <div class="corpoproduto">
-                    <div class="imgproduto">
-                        <img src="verdantp/public/img/produto-4.jpg" alt="Lápis de Semente" class="produtominiatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Lápis de Semente</p>
-                        <h2>R$1,05</h2>
-                    </div>
-                    <div class="descricao">
-                        <p>Após o uso, plante o lápis e veja crescer uma linda planta. Feito com materiais
-                            biodegradáveis.</p>
-                    </div>
-                    <div class="botoes-container">
-                        <a href="../verdantp/compra/index.php">
-                            <button class="btn-comprar">Comprar</button>
-                        </a>
-                        <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                            class="btn-carrinho">
-                            <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="corpoproduto">
-                    <div class="imgproduto">
-                        <img src="verdantp/public/img/produto-5.jpg" alt="Kit Auto Cuidado Naturalvegan"
-                            class="produtominiatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Kit Auto Cuidado Naturalvegan</p>
-                        <h2>R$50,00</h2>
-                    </div>
-                    <div class="descricao">
-                        <p>Kit especial com produtos naturais para um autocuidado completo. Livre de químicos
-                            agressivos.</p>
-                    </div>
-                    <div class="botoes-container">
-                        <a href="../verdantp/compra/index.php">
-                            <button class="btn-comprar">Comprar</button>
-                        </a>
-                        <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                            class="btn-carrinho">
-                            <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="corpoproduto">
-                    <div class="imgproduto">
-                        <img src="verdantp/public/img/produto-6.jpg" alt="Kit Sabonete e Bucha Natural"
-                            class="produtominiatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Kit Sabonete e Bucha Natural</p>
-                        <h2>R$37,00</h2>
-                    </div>
-                    <div class="descricao">
-                        <p>Sabonete artesanal e bucha vegetal para um banho relaxante e ecológico.</p>
-                    </div>
-                    <div class="botoes-container">
-                        <a href="../verdantp/compra/index.php">
-                            <button class="btn-comprar">Comprar</button>
-                        </a>
-                        <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                            class="btn-carrinho">
-                            <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                        </a>
-                    </div>
-                </div>
-            </div>
 
         </div>
 
-        <!-- PRODUTOS 3 -->
-        <div class="container">
-            <div class="linha-produtos">
-                <div class="corpoproduto">
-                    <div class="imgproduto">
-                        <img src="verdantp/public/img/produtos7.jpg" alt="Bolsa Ecológica" class="produtominiatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Bolsa Ecológica</p>
-                        <h2>R$32,45</h2>
-                    </div>
-                    <div class="descricao">
-                        <p>Bolsa feita de algodão reciclado, perfeita para substituir sacolas plásticas.</p>
-                    </div>
-                    <div class="botoes-container">
-                        <a href="../verdantp/compra/index.php">
-                            <button class="btn-comprar">Comprar</button>
-                        </a>
-                        <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                            class="btn-carrinho">
-                            <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="corpoproduto">
-                    <div class="imgproduto">
-                        <img src="verdantp/public/img/produtos8.jpg" alt="Bolsa Térmica" class="produtominiatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Bolsa Térmica</p>
-                        <h2>R$32,45</h2>
-                    </div>
-                    <div class="descricao">
-                        <p>Bolsa sustentável com isolamento térmico para conservar alimentos e bebidas.</p>
-                    </div>
-                    <div class="botoes-container">
-                        <a href="../verdantp/compra/index.php">
-                            <button class="btn-comprar">Comprar</button>
-                        </a>
-                        <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                            class="btn-carrinho">
-                            <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="corpoproduto">
-                    <div class="imgproduto">
-                        <img src="verdantp/public/img/produtos9.jpg" alt="Bolsa de Juta" class="produtominiatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Bolsa de Juta</p>
-                        <h2>R$32,45</h2>
-                    </div>
-                    <div class="descricao">
-                        <p>Produzida com fibras naturais, resistente e estilosa para o dia a dia.</p>
-                    </div>
-                    <div class="botoes-container">
-                        <a href="../verdantp/compra/index.php">
-                            <button class="btn-comprar">Comprar</button>
-                        </a>
-                        <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                            class="btn-carrinho">
-                            <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                        </a>
-                    </div>
-                </div>
+<!-- PRODUTOS 3 -->
+<div class="container">
+    <div class="linha-produtos">
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produtos7.jpg" alt="Bolsa Ecológica" class="produtominiatura">
             </div>
-
-            <!-- PRODUTOS 4 -->
-            <div class="container">
-                <div class="linha-produtos">
-                    <div class="corpoproduto">
-                        <div class="imgproduto">
-                            <img src="verdantp/public/img/produtos10.jpg" alt="Bolsa de Algodão Cru"
-                                class="produtominiatura">
-                        </div>
-                        <div class="titulo">
-                            <p>Bolsa de Algodão Cru</p>
-                            <h2>R$32,45</h2>
-                        </div>
-                        <div class="descricao">
-                            <p>Bolsa versátil e sustentável, feita de algodão natural sem tingimentos químicos.</p>
-                        </div>
-                        <div class="botoes-container">
-                            <a href="../verdantp/compra/index.php">
-                                <button class="btn-comprar">Comprar</button>
-                            </a>
-                            <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                                class="btn-carrinho">
-                                <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="corpoproduto">
-                        <div class="imgproduto">
-                            <img src="verdantp/public/img/produtos11.jpg" alt="Bolsa de Papel Kraft"
-                                class="produtominiatura">
-                        </div>
-                        <div class="titulo">
-                            <p>Bolsa de Papel Kraft</p>
-                            <h2>R$32,45</h2>
-                        </div>
-                        <div class="descricao">
-                            <p>Bolsa ecológica biodegradável, ideal para pequenas compras e presentes.</p>
-                        </div>
-                        <div class="botoes-container">
-                            <a href="../verdantp/compra/index.php">
-                                <button class="btn-comprar">Comprar</button>
-                            </a>
-                            <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                                class="btn-carrinho">
-                                <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="corpoproduto">
-                        <div class="imgproduto">
-                            <img src="verdantp/public/img/produtos12.jpg" alt="Bolsa Compacta Reutilizável"
-                                class="produtominiatura">
-                        </div>
-                        <div class="titulo">
-                            <p>Bolsa Compacta Reutilizável</p>
-                            <h2>R$32,45</h2>
-                        </div>
-                        <div class="descricao">
-                            <p>Prática e dobrável, cabe no bolso e substitui sacolas plásticas descartáveis.</p>
-                        </div>
-                        <div class="botoes-container">
-                            <a href="../verdantp/compra/index.php">
-                                <button class="btn-comprar">Comprar</button>
-                            </a>
-                            <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45"
-                                class="btn-carrinho">
-                                <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="titulo">
+                <p>Bolsa Ecológica</p>
+                <h2>R$32,45</h2>
             </div>
+            <div class="descricao">
+                <p>Bolsa feita de algodão reciclado, perfeita para substituir sacolas plásticas.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
+
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produtos8.jpg" alt="Bolsa Térmica" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Bolsa Térmica</p>
+                <h2>R$32,45</h2>
+            </div>
+            <div class="descricao">
+                <p>Bolsa sustentável com isolamento térmico para conservar alimentos e bebidas.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
+
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produtos9.jpg" alt="Bolsa de Juta" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Bolsa de Juta</p>
+                <h2>R$32,45</h2>
+            </div>
+            <div class="descricao">
+                <p>Produzida com fibras naturais, resistente e estilosa para o dia a dia.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+    </div>
+</div>
+
+<!-- PRODUTOS 4 -->
+<div class="container">
+    <div class="linha-produtos">
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produtos10.jpg" alt="Bolsa de Algodão Cru" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Bolsa de Algodão Cru</p>
+                <h2>R$32,45</h2>
+            </div>
+            <div class="descricao">
+                <p>Bolsa versátil e sustentável, feita de algodão natural sem tingimentos químicos.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
+
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produtos11.jpg" alt="Bolsa de Papel Kraft" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Bolsa de Papel Kraft</p>
+                <h2>R$32,45</h2>
+            </div>
+            <div class="descricao">
+                <p>Bolsa ecológica biodegradável, ideal para pequenas compras e presentes.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
+
+        <div class="corpoproduto">
+            <div class="imgproduto">
+                <img src="verdantp/public/img/produtos12.jpg" alt="Bolsa Compacta Reutilizável" class="produtominiatura">
+            </div>
+            <div class="titulo">
+                <p>Bolsa Compacta Reutilizável</p>
+                <h2>R$32,45</h2>
+            </div>
+            <div class="descricao">
+                <p>Prática e dobrável, cabe no bolso e substitui sacolas plásticas descartáveis.</p>
+            </div>
+            <div class="botoes-container">
+    <a href="../verdantp/compra/index.php">
+        <button class="btn-comprar">Comprar</button>
+    </a>
+    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+        <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
+    </a>
+</div>
+</div>
         </div>
     </div>
-    <br><br>
-    <br>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Sobre nós</h3>
-                <p>Somos uma empresa comprometida com a sustentabilidade e inovação. Nossa missão é trazer soluções
-                    ecológicas e eficientes para o futuro.</p>
-            </div>
+</div>
+</div>
+<br><br>
+<br>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Sobre nós</h3>
+            <p>Somos uma empresa comprometida com a sustentabilidade e inovação. Nossa missão é trazer soluções ecológicas e eficientes para o futuro.</p>
+        </div>
 
             <div class="footer-section">
                 <h3>Links rápidos</h3>

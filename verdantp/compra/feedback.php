@@ -11,11 +11,76 @@
 
 <body>
 
-    <header class="header">
-        <div class="logo-container">
-            <a href="../../index.php">
-                <img src="../../public/css/img/download.png" alt="Verdant Logo" class="logo">
-            </a>
+<header class="header">
+    <div class="logo-container">
+        <a href="../../index.php"> 
+            <img src="../../public/css/img/download.png" alt="Verdant Logo" class="logo">
+        </a>
+    </div>
+    <h2 class="brand-name">VERDANT</h2>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <a href="../../carrinho.php">
+            <img src="../../public/css/img/carrinho.png" alt="Carrinho" width="90px">
+        </a>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<nav class="menu">
+    <a href="../../index.php">INÍCIO</a>
+    <a href="../../sobre.php">EMPRESA</a>
+    <a href="index.php">VENDA</a>
+    <a href="feedback.php">FEEDBACKS</a>
+    <a href="../../cadastro.php"><i class="fas fa-sign-in-alt"></i> ENTRAR/SAIR</a>
+</nav>
+
+<div class="linha-verde"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const text = "VERDANT";
+        const container = document.getElementById("curvedText");
+        const radius = -150;
+        const angleStep = 180 / text.length;
+
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement("span");
+            span.innerText = text[i];
+            const angle = i * angleStep;
+            const x = Math.cos((angle * Math.PI) / 180) * radius;
+            const y = Math.sin((angle * Math.PI) / 180) * radius;
+            span.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+            container.appendChild(span);
+        }
+    });
+</script>
+<br><br>
+<section class="feedback-section">
+
+    <div class="bola">
+        <h2>FEEDBACKS</h2>
+    </div>
+
+    <div class="container">
+        <div class="form">
+            <form action="enviar_feedback.php" method="POST">
+                <div>
+                    <input type="text" name="nome" placeholder="Nome" required>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div>
+                    <textarea name="comentario" placeholder="Escreva seu comentário..." rows="5" required></textarea>
+                </div>
+
+                <div class="buto">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
         </div>
         <h2 class="brand-name">VERDANT</h2>
         <div class="menu-icon" onclick="toggleMenu()">

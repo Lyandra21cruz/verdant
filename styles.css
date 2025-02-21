@@ -884,3 +884,154 @@ h1 {
     position: relative;
     z-index: 1001;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave na tabela */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo mais suave */
+    transition: background-color 0.3s ease; /* Transição de cor suave */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
+}
+
+th {
+    background-color: #3a9440; /* Cabeçalho azul vibrante */
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+td:hover {
+    background-color: #f1f1f1; /* Efeito hover suave */
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease; /* Transição suave para imagem */
+}
+
+.product-img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quantity button {
+    background: #067214;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantity button:hover {
+    background: #4f9234; /* Efeito hover no botão */
+    transform: scale(1.05); /* Efeito de zoom */
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.remove {
+    background: none;
+    border: none;
+    color: #e60023;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.remove:hover {
+    color: #d3001d; /* Efeito de hover no ícone de remover */
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-summary span {
+    font-size: 1.4rem;
+    color: green;
+}
+
+.checkout {
+    width: 100%;
+    background: #067214;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.checkout:hover {
+    background: #4f9234;
+    transform: scale(1.05); /* Efeito de zoom no botão */
+}
+
+h1 {
+    font-family: Cormorant, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 0 0 8px rgba(44, 44, 44, 0.8),
+    0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.payment-methods i {
+    font-size: 1.5rem;
+    margin: 0 8px;
+}
+
+.payment-card {
+    display: inline-block;
+    padding: 15px;
+    margin: 8px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 12px;
+}
