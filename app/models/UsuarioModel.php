@@ -1,5 +1,5 @@
 <?php
-require_once('C:\Turma2\xampp\htdocs\verdant\config\config.php');
+require_once('config\config.php');
 
 class UsuarioModel
 {
@@ -11,10 +11,10 @@ class UsuarioModel
         $this->pdo = $database->getConnection();
     }
 
-    public function criarUsuario($nome_usuario, $email, $vendedor, $admin)
+    public function criarUsuario($nome_usuario, $email, $senha, $vendedor, $admin)
     {
-        $stmt = $this->pdo->prepare("INSERT INTO usuarios (nome_usuario, email, vendedor, admin) VALUES (?)");
-        $stmt->execute([$nome_usuario, $email, $vendedor, $admin]);
+        $stmt = $this->pdo->prepare("INSERT INTO usuarios (nome_usuario, email, senha, vendedor, admin) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$nome_usuario, $email, $senha, $vendedor, 0]);
     }
 
     public function editarUsuario($id)

@@ -91,11 +91,11 @@
         <div class="footer-section">
             <h3>Links rápidos</h3>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
+            <li><a href="../cart/index.php">Home</a></li>
+                <li><a href="sobre.php">Empresa</a></li>
+                <li><a href="../verdantp/compra/index.php">Venda</a></li>
+                <li><a href="../verdantp/compra/feedback.php">Feedbacks</a></li>
+                <li><a href="index.php">Sair</a></li>
             </ul>
         </div>
 
