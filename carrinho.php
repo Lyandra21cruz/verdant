@@ -31,7 +31,7 @@
 <div class="linha-verde"></div>
 <br>       
 <div class="container">
-    <h1><i class="fas fa-shopping-cart"></i> Meu Carrinho</h1>
+    <h1><i class="fas fa-shopping-cart"></i> MEU CARRINHO</h1>
     <table>
         <thead>
             <tr>

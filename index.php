@@ -54,7 +54,7 @@
             </div>
             <div class="botoes-container">
     <a href="../verdantp/compra/index.php" class="btn-comprar">Comprar</a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho">
     </a>
 </div>
@@ -76,7 +76,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -97,7 +97,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -121,7 +121,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -142,7 +142,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -164,7 +164,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -191,7 +191,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -212,7 +212,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -233,7 +233,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -258,7 +258,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -279,7 +279,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
@@ -300,7 +300,7 @@
     <a href="../verdantp/compra/index.php">
         <button class="btn-comprar">Comprar</button>
     </a>
-    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
+    <a href=carrinho.php class="btn-carrinho">
         <img src="verdantp/public/img/carrinho.png" alt="Carrinho" width="50px">
     </a>
 </div>
