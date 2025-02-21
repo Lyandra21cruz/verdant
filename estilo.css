@@ -54,7 +54,7 @@ h1 {
 }
 .index {
   font-family: "Arial", sans-serif;
-  background: url("public/css/img/fund.jpg") no-repeat center center fixed;
+  background: url("public/css/img/fund.webp") no-repeat center center fixed;
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.5);
   color: #fff;
@@ -178,7 +178,7 @@ button:hover {
     opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 @keyframes slideInUp {
@@ -188,9 +188,10 @@ button:hover {
   }
   100% {
     transform: translateY(0);
-    opacity: 0;
+    opacity: 1;
   }
 }
+
 
 .logo-container {
   display: flex;
