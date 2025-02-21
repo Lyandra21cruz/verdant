@@ -221,19 +221,7 @@ body {
 
 
 
-.vangogh-footer-3 {
-    background: url('img/lulu.png') no-repeat center center;
-    background-size: auto; /* Ajusta a imagem para caber inteira no rodapé */
-    border-top: 2px solid #ffcc80; /* Detalhe em tom de dourado */
-    color: #535353;
-    font-family: 'Georgia', serif;
-    text-align: center;
-    position: relative;
-    height: 300px; /* Altura reduzida para um footer compacto */
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
-  }
+
   
   .footer-content {
     position: relative;

@@ -6,6 +6,8 @@
     <title>Sobre Nós | Verdant</title>
     <link rel="stylesheet" href="estilo.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body class="sobre">
 <header class="header">
@@ -21,11 +23,17 @@
 
 </header>
 <div class="menu">
-        <a href="cart/index.php">INÍCIO</a>
+        <a href="index.php">INÍCIO</a>
         <a href="sobre.php">EMPRESA</a>
         <a href="verdantp/compra/index.php">VENDA</a>
         <a href="verdantp/compra/feedback.php">FEEDBACKS</a>
-    </div>
+    <a href="cadastro.php"><i class="fas fa-sign-in-alt"></i> ENTRAR/SAIR</a>
+</a>
+
+
+</a>
+
+</div>
     <div class="linha-verde"></div>
 <br>
 <div class="carousel">
@@ -91,11 +99,11 @@
         <div class="footer-section">
             <h3>Links rápidos</h3>
             <ul>
-            <li><a href="../cart/index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="sobre.php">Empresa</a></li>
-                <li><a href="../verdantp/compra/index.php">Venda</a></li>
-                <li><a href="../verdantp/compra/feedback.php">Feedbacks</a></li>
-                <li><a href="index.php">Sair</a></li>
+                <li><a href="verdantp/compra/index.php">Venda</a></li>
+                <li><a href="verdantp/compra/feedback.php">Feedbacks</a></li>
+                <li><a href="cadastro.php">Sair</a></li>
             </ul>
         </div>
 

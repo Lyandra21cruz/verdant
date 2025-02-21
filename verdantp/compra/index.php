@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <title>Compra Verdant</title>
 </head>
 
@@ -24,17 +26,23 @@
 </header>
 
 <div class="menu">
-        <a href="../../cart/index.php">INÍCIO</a>
+<a href="../../index.php">INÍCIO</a>
         <a href="../../sobre.php">EMPRESA</a>
-        <a href="verdantp/compra/index.php">VENDA</a>
+        <a href="index.php">VENDA</a>
         <a href="feedback.php">FEEDBACKS</a>
-    
+    <a href="../../cadastro.php"><i class="fas fa-sign-in-alt"></i> ENTRAR/SAIR</a>
+</a>
+
+
+</a>
+
+</div>
     </div>
     <div class="linha-verde"></div>
 <br>
 
 
-    <div class="container"><main>            <h1>Dados do Comprador</h1>
+    <div class="container"><main>            <h1>DADOS DO COMPRADOR</h1>
 
         <section class="checkout">
             <form class="checkout-form">
@@ -111,12 +119,12 @@
 
         <div class="footer-section">
             <h3>Links rápidos</h3>
-            <ul> <li><a href="../cart/index.php">Home</a></li>
+            <ul>
+                <li><a href="../../index.php">Home</a></li>
                 <li><a href="../../sobre.php">Empresa</a></li>
                 <li><a href="verdantp/compra/index.php">Venda</a></li>
                 <li><a href="verdantp/compra/feedback.php">Feedbacks</a></li>
-                <li><a href="../index.php">Sair</a></li>
-               
+                <li><a href="../../cadastro.php">Sair</a></li>
             </ul>
         </div>
 

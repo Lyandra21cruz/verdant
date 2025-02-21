@@ -939,6 +939,7 @@ footer .social-media a:hover {
     color: white;
     text-transform: uppercase;
     flex-grow: 1;
+    left: 3%;
     text-align: center;
     font-family: "Cinzel","Arial", sans-serif;
 }

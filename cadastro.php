@@ -10,9 +10,6 @@ require_once("app/controllers/UsuarioController.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ?> 
-    <!-- <script>
-        alert('teste');
-    </script> -->
     <?php
     $controller = new UsuarioController();
     $controller->criarUsuario($_POST['nome_usuario'], $_POST['email'], $_POST['senha'], $_POST['vendedor'] ?? 0, 0);

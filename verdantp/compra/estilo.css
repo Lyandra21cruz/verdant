@@ -78,7 +78,7 @@ input:focus, select:focus {
 }
 
 button.btn-comprar {
-    background-color: #28a745;
+    background-color: #0e5820;
     color: #fff;
     font-size: 1.2rem;
     padding: 1rem 2rem;
@@ -93,44 +93,65 @@ button.btn-comprar:hover {
     background-color: #218838;
     transform: translateY(-2px);
 }
-
-/* Ajustes para as Informações Fora do Container */
 .extra-info {
-    margin-top: 3rem;
-    padding: 1.5rem;
-    background-color: #fff;
-    color: #666;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.extra-info div {
+    border: 2px solid rgb(0, 100, 0, 0.5); /* Borda mais refinada */
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.extra-info div:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 20px rgba(0, 100, 0, 0.3); /* Efeito mais sutil no hover */
 }
 
 .extra-info h3 {
-    color: #28a745;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: rgb(0, 80, 0);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.extra-info p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+.extra-info p, 
+.extra-info ul {
+    color: #444;
     line-height: 1.6;
 }
 
 .extra-info ul {
-    list-style: none;
-    padding-left: 0;
+    padding-left: 20px;
 }
 
-.extra-info li {
-    margin: 0.8rem 0;
+.extra-info ul li {
+    margin-bottom: 5px;
 }
 
-.extra-info li span {
-    font-weight: 600;
-    color: #28a745;
+.extra-info strong {
+    color: #222;
 }
+
+.shipping-info h3::before {
+    content: "🚚";
+}
+
+.privacy-policy h3::before {
+    content: "🔒";
+}
+
+.security h3::before {
+    content: "🛡️";
+}
+
 
 /* Ajustes de Responsividade */
 @media (max-width: 768px) {
@@ -293,6 +314,7 @@ button.btn-comprar:hover {
 
 .brand-name {
     font-size: 38px;
+    left: 3%;
     font-weight: bold;
     color: white;
     text-transform: uppercase;

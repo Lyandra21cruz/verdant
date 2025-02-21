@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Feedbacks</title>
 </head>
+
+<body>
+
 <header class="header">
     <div class="logo-container">
-       <a href="../../index.php"> <img src="../../public/css/img/download.png" alt="Verdant Logo" class="logo"></a>
+        <a href="../../index.php"> 
+            <img src="../../public/css/img/download.png" alt="Verdant Logo" class="logo">
+        </a>
     </div>
     <h2 class="brand-name">VERDANT</h2>
     <div class="menu-icon" onclick="toggleMenu()">
-        <div></div>        <div></div><a href="carrinho.php"><img src="../../public/css/img/carrinho.png" alt="" width= "90px"></a>
-
+        <div></div>
+        <div></div>
+        <a href="carrinho.php">
+            <img src="../../public/css/img/carrinho.png" alt="Carrinho" width="90px">
+        </a>
         <div></div>
         <div></div>
     </div>
 </header>
-<div class="menu">
-        <a href="../../cart/index.php">INÍCIO</a>
-        <a href="../../sobre.php">EMPRESA</a>
-        <a href="index.php">VENDA</a>
-        <a href="feedback.php">FEEDBACKS</a>
-    </div>
-    <div class="linha-verde"></div>
-<br>
 
+<nav class="menu">
+    <a href="../../index.php">INÍCIO</a>
+    <a href="../../sobre.php">EMPRESA</a>
+    <a href="index.php">VENDA</a>
+    <a href="feedback.php">FEEDBACKS</a>
+    <a href="../../cadastro.php"><i class="fas fa-sign-in-alt"></i> ENTRAR/SAIR</a>
+</nav>
 
+<div class="linha-verde"></div>
 
-
-    <script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         const text = "VERDANT";
         const container = document.getElementById("curvedText");
         const radius = -150;
@@ -43,39 +52,40 @@
             const angle = i * angleStep;
             const x = Math.cos((angle * Math.PI) / 180) * radius;
             const y = Math.sin((angle * Math.PI) / 180) * radius;
-            span.style.transform = translate(${x}px, ${y}px) rotate(${angle}deg);
+            span.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
             container.appendChild(span);
         }
-    </script>
-
-
-
+    });
+</script>
+<br><br>
+<section class="feedback-section">
 
     <div class="bola">
-        <h2>
-            FEEDBACKS
-        </h2>
+        <h2>FEEDBACKS</h2>
     </div>
-
-
-</header>
-<section>
 
     <div class="container">
         <div class="form">
-            <form action="">
-                <div> <input type="text" name="nome" placeholder="NOME"></div>
-                <div><input type="email" name="email" placeholder="EMAIL"></div>
-                <div><input type="text" name="comentario" placeholder="COMENTÁRIO"></div>
+            <form action="enviar_feedback.php" method="POST">
+                <div>
+                    <input type="text" name="nome" placeholder="Nome" required>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div>
+                    <textarea name="comentario" placeholder="Escreva seu comentário..." rows="5" required></textarea>
+                </div>
 
                 <div class="buto">
-                    <button>ENVIAR</button>
+                    <button type="submit">Enviar</button>
                 </div>
             </form>
-
         </div>
     </div>
-</section><br><br>
+</section>
+<br><br><br>
+
 <footer>
     <div class="footer-container">
         <div class="footer-section">
@@ -86,11 +96,11 @@
         <div class="footer-section">
             <h3>Links rápidos</h3>
             <ul>
-            <li><a href="../cart/index.php">Home</a></li>
-                <li><a href="../sobre.php">Empresa</a></li>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../../sobre.php">Empresa</a></li>
                 <li><a href="verdantp/compra/index.php">Venda</a></li>
                 <li><a href="verdantp/compra/feedback.php">Feedbacks</a></li>
-                <li><a href="../index.php">Sair</a></li>
+                <li><a href="../../cadastro.php">Sair</a></li>
             </ul>
         </div>
 
@@ -119,6 +129,6 @@
         </div>
     </div>
 </footer>
-</body>
 
+</body>
 </html>
