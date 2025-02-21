@@ -8,7 +8,7 @@ class AvaliacaoController
     public $avaliacaoModel;
     public function __construct()
     {
-        $this->avaliacaoModel = new UsuarioModel();
+        $this->avaliacaoModel = new AvaliacaoModel();
     }
 
     public function criarAvaliacao($feedback, $nota)
