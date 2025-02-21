@@ -11,9 +11,9 @@ class UsuarioController
         $this->usuarioModel = new UsuarioModel();
     }
 
-    public function criarUsuario($nome_usuario, $email, $vendedor, $admin)
+    public function criarUsuario($nome_usuario, $email, $senha, $vendedor, $admin)
     {
-        $this->usuarioModel->criarUsuario($nome_usuario, $email, $vendedor, $admin);
+        $this->usuarioModel->criarUsuario($nome_usuario, $email, $senha, $vendedor, $admin);
     }
 
     public function editarUsuario($id)

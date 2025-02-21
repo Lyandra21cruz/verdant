@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" name="senha" placeholder="Senha" required>
                 <button type="submit">ENTRAR</button>
                 <br>
-                <b><a href="cadastro.php">Criar Conta</a></b>
+                <div class="back-to-login"><b><a href="cadastro.php">Não tem uma conta? Clique aqui para cadastrar</a></b></div>
             </form>
         </div>
     </div>
