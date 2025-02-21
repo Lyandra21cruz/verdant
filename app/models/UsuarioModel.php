@@ -35,10 +35,30 @@ class UsuarioModel
             $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
             $stmt->execute([$email, $senha]);
             $_SESSION['logado'] = true;
+            
             header("location: sobre.php");
+        } catch (\Throwable $e) {
+            echo "<script> alert('deu erro'); </script>";
+        }
+    }
+
+    public function buscarId($email, $senha)
+    {
+        try {
+            $stmt = $this->pdo->prepare("SELECT id FROM usuarios WHERE email = ? AND senha = ?");
+            $stmt->execute([$email, $senha]);
+            return $stmt->fetch(\PDO::FETCH_ASSOC);
         } catch (\Throwable $e) {
             return $e->getMessage();
         }
+    }
+
+    public function permissaoUsuario($id)
+    {
+        $stmt = $this->pdo->prepare("SELECT vendedor, admin FROM usuarios WHERE id = ?");
+        $stmt->execute([$id]);
+        $usuario = $stmt->fetch();
+        return $usuario;
     }
 
 
