@@ -1035,3 +1035,19 @@ table th, table td {
     text-align: center;
     padding: 12px;
 }
+
+.quantidade-carrinho {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: #4f9234;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: -16px;
+    right: -8px;
+}
