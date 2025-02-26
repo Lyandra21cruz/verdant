@@ -1053,3 +1053,38 @@ table th, table td {
     top: -16px;
     right: -8px;
 }
+.input-qtd-produto {
+    width: 60px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.input-qtd-produto:focus {
+    border-color: #4A90E2;
+    background-color: #fff;
+    outline: none;
+}
+
+.input-qtd-produto::-webkit-outer-spin-button,
+.input-qtd-produto::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-qtd-produto[type=number] {
+    -moz-appearance: textfield;
+}
+
+.input-qtd-produto::-webkit-input-placeholder {
+    color: #999;
+}
+
+.input-qtd-produto:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
