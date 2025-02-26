@@ -67,13 +67,45 @@ session_start();
                         no dia a dia.</p>
                 </div>
                 <div class="botoes-container">
-                    <a href="../verdantp/compra/index.php" class="btn-comprar">Comprar</a>
-                    <a href="?adicionar=true&produto_id=1&nome=Bolsa+Sustent%C3%A1vel&preco=42.45" class="btn-carrinho">
-                        <img src="verdantp/public/img/carrinho.png" alt="Carrinho">
-                    </a>
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+                        <input type="hidden" name="adicionar" value="true">
+                        <input type="hidden" name="produto_id" value="1">
+                        <button type="submit" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <input type="number" name="qtd_produto" id="quantidade" value="1" min="1" max="10" class="input-qtd-produto">
+                    </form>
                 </div>
 
             </div>
+
+            <?php 
+            require_once'../verdantp/app/models/ProdutoModel.php';
+            $produto = new ProdutoController();
+            $produtos = $produto->listarProdutos();
+
+                foreach ($produtos as $produto) {
+                    ?> <div class="corpoproduto">
+                    <div class="imgproduto">
+                        <img src="verdantp/public/img/<?= $produto['imagem_produto'] ?>" alt="<?= $produto['nome_produto'] ?>" class="produtominiatura">
+                    </div>
+                    <div class="titulo">
+                        <p><?= $produto['nome_produto'] ?></p>
+                        <h2>R$ <?= $produto['preco_produto'] ?></h2>
+                    </div>
+                    <div class="descricao">
+                        <p><?= $produto['descricao_produto'] ?></p>
+                    </div>
+                    <div class="botoes-container">
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+                            <input type="hidden" name="adicionar" value="true">
+                            <input type="hidden" name="produto_id" value="<?= $produto['id_produto'] ?>">
+                            <button type="submit" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i></button>
+                            <input type="number" name="qtd_produto" id="quantidade" value="1" min="1" max="10" class="input-qtd-produto">
+                        </form>
+                    </div>
+    
+                </div>
+                <?php };
+            ?>
 
             <div class="corpoproduto">
                 <div class="imgproduto">

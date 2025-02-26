@@ -11,9 +11,9 @@ class CarrinhoController
         $this->carrinhomodel = new CarrinhoModel();
     }
 
-    public function adicionarCarrinho($id_usuario, $id_produto, $qtd_produto)
+    public function adicionarItemCarrinho($id_usuario, $id_produto, $qtd_produto)
     {
-        $this->carrinhomodel->adicionarCarrinho($id_usuario, $id_produto, $qtd_produto);
+        $this->carrinhomodel->adicionarItemCarrinho($id_usuario, $id_produto, $qtd_produto);
     }
 
     public function editarCarrinho($id)
@@ -21,21 +21,10 @@ class CarrinhoController
         $this->carrinhomodel->editarCarrinho($id);
     }
 
-    public function deletarCarrinho($id)
+    public function deletarItemCarrinho($id_usuario, $id_produto)
     {
-        $this->carrinhomodel->deletarCarrinho($id);
+        $this->carrinhomodel->deletarItemCarrinho($id_usuario, $id_produto);
     }
-
-    public function entrarCarrinho($email, $senha)
-    {
-        $this->carrinhomodel->entrarCarrinho($email, $senha);
-    }
-    
-    public function permissaoCarrinho($id)
-    {
-        return $this->carrinhomodel->permissaoCarrinho($id);
-    }
-
 
 }
 
