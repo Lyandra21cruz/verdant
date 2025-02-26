@@ -1,15 +1,21 @@
 <?php
 
-require_once('config\config.php');
+require_once('C:\Turma2\xampp\htdocs\verdant\config\config.php');
 
 class ProdutoModel {
 
     public $pdo;
 
-    public function criarProduto($nome_usuario, $email, $senha, $vendedor, $admin)
+    public function __construct()
     {
-        $stmt = $this->pdo->prepare("INSERT INTO produtos (nome_usuario, email, senha, vendedor, admin) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([$nome_usuario, $email, $senha, $vendedor, 0]);
+        $database = new Config();
+        $this->pdo = $database->getConnection();
+    }
+
+    public function criarProduto($id_usuario, $nome_produto, $descricao_produto, $imagem_produto, $preco_produto, $estoque_produto)
+    {
+        $stmt = $this->pdo->prepare("INSERT INTO produtos (id_usuario, nome_produto, descricao_produto, imagem_produto, preco_produto, estoque_produto) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$id_usuario, $nome_produto, $descricao_produto, $imagem_produto, $preco_produto, $estoque_produto]);
     }
 
     public function editarProduto($id)

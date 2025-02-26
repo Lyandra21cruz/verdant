@@ -89,6 +89,7 @@ session_start();
                     <li><a href="sobre.php">Empresa</a></li>
                     <li><a href="app/views/compra/index.php">Venda</a></li>
                     <li><a href="app/views/compra/feedback.php">Feedbacks</a></li>
+                    <li><a href="app/views/produtos/">Cadastre um produto</a></li>
                     <li><a href="cadastro.php">Sair</a></li>
                 </ul>
             </div>

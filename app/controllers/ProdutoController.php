@@ -10,9 +10,9 @@ class ProdutoController {
         $this->produtoModel = new ProdutoModel();
     }
 
-    public function criarProduto($nome_usuario, $email, $senha, $vendedor, $admin)
+    public function criarProduto($id_usuario, $nome_produto, $descricao_produto, $imagem_produto, $preco_produto, $estoque_produto)
     {
-        $this->produtoModel->criarProduto($nome_usuario, $email, $senha, $vendedor, $admin);
+        $this->produtoModel->criarProduto($id_usuario, $nome_produto, $descricao_produto, $imagem_produto, $preco_produto, $estoque_produto);
     }
 
     public function editarProduto($id)

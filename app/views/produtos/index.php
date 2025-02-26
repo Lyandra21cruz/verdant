@@ -13,7 +13,7 @@ session_start();
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <title>Compra Verdant</title>
+    <title>Cadastre um produto - Verdant</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@ session_start();
         <a href="feedback.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
-            echo "<a href='app/views/usuario/logout.php'><i class='fas fa-sign-in-alt' style='rotate: 180deg;'></i> SAIR</a>";
+            echo "<a href='../usuario/logout.php'><i class='fas fa-sign-in-alt' style='rotate: 180deg;'></i> SAIR</a>";
         } else {
             echo "<a href='login.php'><i class='fas fa-sign-in-alt'></i> ENTRAR</a>";
         }
@@ -50,44 +50,37 @@ session_start();
 
     <div class="container">
         <main>
-            <h1>DADOS DO COMPRADOR</h1>
+            <h1>CADASTRE SEU PRODUTO</h1>
 
             <section class="checkout">
-                <form class="checkout-form">
+                <form class="checkout-form" action="cadastrar.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nome">Nome Completo:</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="pin">PIN do Produto:</label>
-                        <input type="text" id="pin" name="pin" required>
+                        <label for="nome_produto">Nome do produto:</label>
+                        <input type="text" id="nome_produto" name="nome_produto">
                     </div>
 
                     <div class="form-group">
-                        <label for="cep">CEP:</label>
-                        <input type="text" id="cep" name="cep" required>
+                        <label for="descricao_produto">Descrição do produto:</label>
+                        <input type="text" id="descricao_produto" name="descricao_produto">
                     </div>
 
                     <div class="form-group">
-                        <label for="pagamento">Forma de Pagamento:</label>
-                        <select id="pagamento" name="pagamento" required>
-                            <option value="cartao">Cartão de Crédito</option>
-                            <option value="boleto">Boleto Bancário</option>
-                            <option value="pix">Pix</option>
-                        </select>
+                        <label for="imagem_produto">Imagem do produto:</label>
+                        <input type="file" name="imagem_produto[]" id="imagem_produto">
                     </div>
 
-                    <div class="payment-info">
-                        <p><strong>Informações de pagamento:</strong></p>
-                        <ul>
-                            <li><strong>Cartão de Crédito:</strong> Visa, Mastercard, American Express</li>
-                            <li><strong>Boleto Bancário:</strong> Pagamento aprovado em até 3 dias úteis</li>
-                            <li><strong>Pix:</strong> Pagamento instantâneo e sem taxas adicionais</li>
-                        </ul>
+                    <div class="form-group">
+                        <label for="preco_produto">Preço:</label>
+                        <input type="number" name="preco_produto" id="preco_produto" step=".01">
                     </div>
 
-                    <button type="submit" class="btn-comprar">Finalizar Compra</button>
+                    <div class="form-group">
+                        <label for="estoque_produto">Estoque:</label>
+                        <input type="number" name="estoque_produto" id="estoque_produto">
+                    </div>
+
+
+                    <button type="submit" class="btn-comprar">Cadastrar produto</button>
                 </form>
             </section>
     </div>
@@ -132,9 +125,9 @@ session_start();
                 <ul>
                     <li><a href="../../index.php">Home</a></li>
                     <li><a href="../../sobre.php">Empresa</a></li>
-                    <li><a href="index.php">Venda</a></li>
+                    <li><a href="verdantp/compra/index.php">Venda</a></li>
                     <li><a href="verdantp/compra/feedback.php">Feedbacks</a></li>
-                    <li><a href="../produtos/">Cadastre um produto</a></li>
+                    <li><a href="index.php">Cadastre um produto</a></li>
                     <li><a href="../../cadastro.php">Sair</a></li>
                 </ul>
             </div>

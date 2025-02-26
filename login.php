@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION["logado"])) {
-    header("Location: sobre.php");
+    header("Location: index.php");
 }
 
 require_once("app/controllers/UsuarioController.php");
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php
     $controller = new UsuarioController();
     $controller->entrarUsuario($_POST['email'], $_POST['senha']);
-}
+};
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="cadastro">
         <h1>ENTRAR</h1>
         <div class="form-container">
-            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <input type="email" name="email" placeholder="Email" required>
                 <br>
                 <input type="password" name="senha" placeholder="Senha" required>
