@@ -1,5 +1,5 @@
 <?php
-require_once('config\config.php');
+require_once('C:\Turma2\xampp\htdocs\verdant\config\config.php');
 
 class UsuarioModel
 {
@@ -35,7 +35,7 @@ class UsuarioModel
             $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
             $stmt->execute([$email, $senha]);
             $_SESSION['logado'] = true;
-            
+            $_SESSION['id_usuario'] = $this->buscarId($email, $senha);;
             header("location: sobre.php");
         } catch (\Throwable $e) {
             echo "<script> alert('deu erro'); </script>";
@@ -45,11 +45,11 @@ class UsuarioModel
     public function buscarId($email, $senha)
     {
         try {
-            $stmt = $this->pdo->prepare("SELECT id FROM usuarios WHERE email = ? AND senha = ?");
+            $stmt = $this->pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = ? AND senha = ?");
             $stmt->execute([$email, $senha]);
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         } catch (\Throwable $e) {
-            return $e->getMessage();
+            die;
         }
     }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/02/2025 às 11:29
+-- Tempo de geração: 26/02/2025 às 11:44
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -87,9 +87,18 @@ CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nome_usuario` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
   `vendedor` tinyint(1) NOT NULL,
   `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Despejando dados para a tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `nome_usuario`, `email`, `senha`, `vendedor`, `admin`) VALUES
+(1, 'teste', 'teste@gmail.com', '123', 0, 0),
+(2, 'teste22', 'teste33@gmail.com', 'teste', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -176,7 +185,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restrições para tabelas despejadas
