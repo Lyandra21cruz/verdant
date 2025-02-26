@@ -15,7 +15,6 @@ session_start();
 
     <title>Compra Verdant</title>
 </head>
-
 <body>
 
     <header class="header">
@@ -34,7 +33,7 @@ session_start();
         <a href="../../../index.php">INÍCIO</a>
         <a href="../../../sobre.php">EMPRESA</a>
         <a href="index.php">VENDA</a>
-        <a href="views/avaliacao.php">FEEDBACKS</a>
+        <a href="../avaliacao.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
             echo "<a href='app/views/usuario/logout.php'><i class='fas fa-sign-in-alt' style='rotate: 180deg;'></i> SAIR</a>";
@@ -46,8 +45,6 @@ session_start();
 
     <div class="linha-verde"></div>
     <br>
-
-
     <div class="container">
         <main>
             <h1>DADOS DO COMPRADOR</h1>

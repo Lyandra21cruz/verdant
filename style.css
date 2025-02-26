@@ -1,6 +1,6 @@
 h2 {
     font-size: 36px;
-    color: #000; /* Preto para destaque */
+    color: #000; 
     font-family: 'Playfair Display', serif;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -88,8 +88,6 @@ body {
     }
 }
 
-
-/* Seção principal (Home) */
 .section.home {
     text-align: center;
     color: #fff;
@@ -114,7 +112,6 @@ body {
     text-shadow: 0 0 5px #ffffff94, 0 0 10px #ffffff94, 0 0 15px #ffffff94, 0 0 20px #ffffff94;
 }
 
-/* Responsivo para menu */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -139,18 +136,18 @@ body {
     margin: 50px auto;
     padding: 30px 20px;
     max-width: 800px;
-    background-color: #ffffff; /* Fundo branco */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    text-align: center; /* Centraliza o conteúdo */
-    position: relative; /* Necessário para a mini imagem */
+    background-color: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    position: relative; 
 }
 
 .mini-image {
-    width: 100px; /* Tamanho pequeno para a imagem */
-    height: auto; /* Permite que a altura se ajuste proporcionalmente */
+    width: 100px; 
+    height: auto; 
     position: absolute;
-    top: -50px; /* Move a imagem para cima do container */
+    top: -50px; 
     left: 50%;
     transform: translateX(-50%);
 }
@@ -158,7 +155,7 @@ body {
 .evolution-container h2 {
     font-size: 24px;
     font-weight: 600;
-    margin-top: 60px; /* Espaço abaixo da imagem */
+    margin-top: 60px; 
     color: #333;
 }
 
@@ -174,7 +171,6 @@ body {
     margin-bottom: 0;
 }
 
-/* Estilos para telas menores */
 @media (max-width: 768px) {
     .evolution-container {
         padding: 20px 15px;
@@ -182,8 +178,8 @@ body {
     }
 
     .mini-image {
-        width: 80px; /* Reduz a largura da imagem */
-        top: -40px; /* Ajusta a posição da imagem */
+        width: 80px; 
+        top: -40px; 
     }
 
     .evolution-container h2 {
@@ -191,19 +187,18 @@ body {
     }
 
     .evolution-container p {
-        font-size: 14px; /* Fonte menor para textos */
-        line-height: 1.6; /* Ajusta o espaçamento */
+        font-size: 14px; 
+        line-height: 1.6; 
     }
 }
 
-/* Estilos para telas muito pequenas (celulares) */
 @media (max-width: 480px) {
     .evolution-container {
         padding: 15px 10px;
     }
 
     .mini-image {
-        width: 60px; /* Reduz ainda mais o tamanho da imagem */
+        width: 60px; 
         top: -30px;
     }
 
@@ -212,35 +207,27 @@ body {
     }
 
     .evolution-container p {
-        font-size: 12px; /* Fonte menor para telas muito pequenas */
+        font-size: 12px; 
     }
 }
-
-
-
-
-
-
-
-  
   .footer-content {
     position: relative;
-    z-index: 1; /* Garante que o texto fique sobre a imagem */
+    z-index: 1; 
    
     padding: 20px 30px;
     border-radius: 10px;
-    max-width: 80%; /* Limita a largura do conteúdo */
+    max-width: 80%; 
     text-align: center;
   }
   
   .footer-content h2 {
-    font-size: 18px; /* Tamanho ajustado para caber no espaço menor */
+    font-size: 18px; 
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
   
   .footer-content p {
-    font-size: 14px; /* Texto menor para caber no espaço reduzido */
+    font-size: 14px; 
     font-style: italic;
     margin-bottom: 15px;
   }
@@ -360,7 +347,7 @@ footer .social-media a:hover {
     justify-content: center;
     position: relative;
     padding: 10px 0;
-    gap: 10px; /* Espaço entre os itens */
+    gap: 10px; 
 }
 
 .menu::after {
@@ -390,7 +377,6 @@ footer .social-media a:hover {
     position: relative;
 }
 
-/* Criando as barras separadoras */
 .menu a:not(:last-child)::after {
     content: '|';
     position: absolute;
@@ -428,18 +414,17 @@ footer .social-media a:hover {
 }
 
 
-
 .brand-name {
     font-size: 38px;
     font-weight: bold;
     color: white;
+    left: 2%;
     text-transform: uppercase;
     flex-grow: 1;
     text-align: center;
     font-family: "Cinzel","Arial", sans-serif;
 }
 
-/* Ícones do Usuário e Carrinho */
 .user-cart-container {
     display: flex;
     align-items: center;
@@ -469,7 +454,6 @@ footer .social-media a:hover {
     color: #4CAF50;
 }
 
-/* Menu */
 .menu {
     display: flex;
     justify-content: center;
@@ -520,8 +504,6 @@ footer .social-media a:hover {
     color: #4CAF50;
     transform: scale(1.05);
 }
-
-/* Responsividade */
 @media screen and (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -554,8 +536,6 @@ footer .social-media a:hover {
     }
 }
 
-
-/* Criando as barras separadoras */
 .menu a:not(:last-child)::after {
     content: '|';
     position: absolute;
@@ -603,3 +583,79 @@ footer .social-media a:hover {
     top: -20px;
     right: -8px;
   }
+  h2 {
+    font-size: clamp(24px, 5vw, 36px); 
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.section.home {
+    padding: 100px 50px;
+}
+
+.section.home h2 {
+    font-size: clamp(28px, 6vw, 48px); 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .caption {
+        max-width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+.footer-content {
+    max-width: 100%;
+    padding: 15px;
+}
+@media (max-width: 480px) {
+    .section.home {
+        padding: 80px 20px;
+    }
+
+    .footer-content h2 {
+        font-size: 16px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    .header .logo,
+    .header .menu {
+      margin: -30px 0;
+    }
+}
