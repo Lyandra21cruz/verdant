@@ -494,3 +494,448 @@ h2 {
     top: -16px;
     right: -8px;
 }
+@media screen and (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .brand-name {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+  
+    .user-cart-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .brand-name {
+      font-size: 24px;
+    }
+  
+    .menu a {
+      font-size: 14px;
+    }
+  }
+  .menu a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4caf50;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .menu a:hover {
+    color: #4caf50;
+    transform: scale(1.05);
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icons i {
+    font-size: 20px;
+    color: #4caf50;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .icons i:hover {
+    transform: scale(1.1);
+  }
+  
+  .back-to-login {
+    margin-top: 20px;
+  }
+  
+  .back-to-login a {
+    font-weight: normal;
+  }
+  
+  .back-to-login a:hover {
+    text-decoration: underline;
+  }
+  
+  .vendedor {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .quantidade-carrinho {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: #4f9234;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -8px;
+  }
+  @media screen and (max-width: 1024px) {
+    .titulo {
+      font-size: 50px; 
+    }
+  
+    h2 {
+      font-size: 28px; 
+    }
+  
+    .cadastro {
+      width: 90%; 
+      margin-left: 10px; 
+    }
+  
+    .form-container {
+      gap: 1rem; 
+    }
+  
+    .logo-container {
+      width: 180px; 
+      height: auto;
+    }
+  
+    .carousel {
+      height: 400px; 
+    }
+  
+    .carousel-btn {
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .titulo {
+      font-size: 35px; 
+    }
+  
+    .subtitulo {
+      font-size: 1.5rem; 
+    }
+  
+    .descricao {
+      font-size: 0.9rem; 
+    }
+  
+    .cadastro {
+      max-width: 95%; 
+      margin-left: 5%; 
+    }
+  
+    .carousel {
+      height: 300px; 
+    }
+  
+    .carousel-btn {
+      padding: 8px;
+      font-size: 18px; 
+    }
+  
+    footer {
+      padding: 20px;
+    }
+  
+    footer .footer-container {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .social-media a {
+      font-size: 18px; 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .titulo {
+      font-size: 28px; 
+    }
+  
+    .subtitulo {
+      font-size: 1.2rem;
+    }
+ 
+    .descricao {
+      font-size: 0.8rem;
+    }
+    .logo-container{
+      max-width: 50vw;
+    }
+  .benefit{
+    min-width: 50px;
+  }
+    .cadastro {
+      max-width: 100%;
+      margin-left: 0; 
+    }
+  
+    .carousel {
+      height: 250px; 
+    }
+  
+    .carousel-btn {
+      padding: 6px;
+      font-size: 16px;
+    }
+  
+    footer {
+      padding: 15px;
+    }
+  
+    .social-media a {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .mission-vision-values {
+      flex-direction: column; 
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .card {
+      width: 90%; 
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center; 
+    }
+  
+    .logo-container {
+      width: 150px;
+      height: auto;
+    }
+  
+    .carousel img {
+      width: 100%; 
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .logo-container {
+        width: 180px;
+        height: auto;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-container {
+        width: 150px;
+        height: auto;
+        max-width: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-container {
+        width: 120px;
+        height: auto;
+        max-width: 60%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    .header .logo,
+    .header .menu {
+      margin: -30px 0;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .titulo {
+      font-size: 50px; 
+    }
+  
+    h2 {
+      font-size: 28px; 
+    }
+  
+    .cadastro {
+      width: 90%; 
+      margin-left: 10px; 
+    }
+  
+    .form-container {
+      gap: 1rem; 
+    }
+  
+    .logo-container {
+      width: 180px; 
+      height: auto;
+    }
+  
+    .carousel {
+      height: 400px; 
+    }
+  
+    .carousel-btn {
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .titulo {
+      font-size: 35px; 
+    }
+  
+    .subtitulo {
+      font-size: 1.5rem; 
+    }
+  
+    .descricao {
+      font-size: 0.9rem; 
+    }
+  
+    .cadastro {
+      max-width: 95%; 
+      margin-left: 5%; 
+    }
+  
+    .carousel {
+      height: 300px; 
+    }
+  
+    .carousel-btn {
+      padding: 8px;
+      font-size: 18px; 
+    }
+  
+    footer {
+      padding: 20px;
+    }
+  
+    footer .footer-container {
+      flex-direction: column; /* Organiza o rodapé em uma coluna */
+      align-items: center;
+    }
+  
+    .social-media a {
+      font-size: 18px; /* Ajuste do tamanho dos ícones de social media */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .titulo {
+      font-size: 28px; /* Ajuste para telas muito pequenas */
+    }
+  
+    .subtitulo {
+      font-size: 1.2rem;
+    }
+  
+    .descricao {
+      font-size: 0.8rem;
+    }
+    .logo-container{
+      min-width: 50vw;
+    }
+  .benefit{
+    min-width: 90vw;
+  }
+    .cadastro {
+      max-width: 100%;
+      margin-left: 0; /* Remove a margem esquerda */
+    }
+  
+    .carousel {
+      height: 250px; /* Ajuste da altura do carrossel */
+    }
+  
+    .carousel-btn {
+      padding: 6px;
+      font-size: 16px;
+    }
+  
+    footer {
+      padding: 15px;
+    }
+  
+    .social-media a {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .mission-vision-values {
+      flex-direction: column; 
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .card {
+      width: 90%; 
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center; 
+    }
+  
+    .logo-container {
+      width: 150px;
+      height: auto;
+    }
+  
+    .carousel img {
+      width: 100%; 
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .logo {
+        width: 200px;
+        height: auto;
+        max-width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logo {
+        width: 150px;
+        height: auto;
+        max-width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo {
+        width: 200px;
+        height: auto;
+        max-width: 60%;
+        margin-top: 2%;
+    }
+  }
+  

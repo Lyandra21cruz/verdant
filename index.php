@@ -17,7 +17,7 @@ session_start();
 <body>
     <header class="header">
         <div class="logo-container">
-            <a href="../cadastro.php"> <img src="public/img/download.png" alt="Verdant Logo" class="logo"></a>
+         <img src="public/img/download.png" alt="Verdant Logo" class="logo">
         </div>
         <h1 class="brand-name">VERDANT</h1>
         <div class="menu-icon" onclick="toggleMenu()">
