@@ -2,7 +2,8 @@
 
 require_once('C:\Turma2\xampp\htdocs\verdant\config\config.php');
 
-class ProdutoModel {
+class ProdutoModel
+{
 
     public $pdo;
 
@@ -28,7 +29,15 @@ class ProdutoModel {
 
     }
 
-    public function listarProdutos() {
+    public function buscarProduto($id_produto)
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM produtos WHERE id_produto = ?");
+        $stmt->execute([$id_produto]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function listarProdutos()
+    {
         $stmt = $this->pdo->prepare("SELECT * FROM produtos");
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);

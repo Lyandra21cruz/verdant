@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION["logado"])) {
-    header("Location: sobre.php");
+    header("Location: index.php");
 }
 
 require_once("app/controllers/UsuarioController.php");

@@ -1053,3 +1053,7 @@ table th, table td {
     top: -16px;
     right: -8px;
 }
+
+.delete-btn {
+    color: red;
+}

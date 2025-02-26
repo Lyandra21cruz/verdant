@@ -9,11 +9,12 @@ if (isset($_SESSION["logado"])) {
 require_once("app/controllers/UsuarioController.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    ?> 
+    ?>
     <?php
     $controller = new UsuarioController();
     $controller->entrarUsuario($_POST['email'], $_POST['senha']);
-};
+}
+;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,14 +38,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="cadastro">
         <h1>ENTRAR</h1>
         <div class="form-container">
-            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>">
                 <input type="email" name="email" placeholder="Email" required>
                 <br>
                 <input type="password" name="senha" placeholder="Senha" required>
                 <br>
                 <button type="submit">Entrar</button>
                 <br>
-                <div class="back-to-login"><b><a href="cadastro.php">Não tem uma conta? Clique aqui para cadastrar</a></b>
+                <div class="back-to-login"><b><a href="cadastro.php">Não tem uma conta? Clique aqui para
+                            cadastrar</a></b>
+                    <div class="errors">
+                        <?php
+                        if (empty($errors)) {
+                        } else {
+                            foreach ($errors as $error) {
+                                echo $error;
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
             </form>
         </div>

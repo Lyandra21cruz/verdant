@@ -21,6 +21,11 @@ class UsuarioController
         $this->usuarioModel->editarUsuario($id);
     }
 
+    public function tornarVendedor($id)
+    {
+        $this->usuarioModel->tornarVendedor($id);
+    }
+
     public function deletarUsuario($id)
     {
         $this->usuarioModel->deletarUsuario($id);

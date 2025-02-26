@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../models/CarrinhoModel.php';
+require_once __DIR__ . '/../models/CarrinhoModel.php';
 
 class CarrinhoController
 {
@@ -24,6 +24,11 @@ class CarrinhoController
     public function deletarItemCarrinho($id_usuario, $id_produto)
     {
         $this->carrinhomodel->deletarItemCarrinho($id_usuario, $id_produto);
+    }
+
+    public function buscarItens($id_usuario)
+    {
+        return $this->carrinhomodel->buscarItens($id_usuario);
     }
 
 }

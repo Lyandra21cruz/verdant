@@ -2,6 +2,19 @@
 
 session_start();
 
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_SESSION['logado'])) {
+        if ($_POST["adicionar"] == true) {
+            require_once __DIR__ . '\app\controllers\CarrinhoController.php';
+            $carrinho = new CarrinhoController();
+    
+            $carrinho->adicionarItemCarrinho($_SESSION['id_usuario'], $_POST['id_produto'], $_POST['qtd_produto']);
+        }
+    } else {
+        header('location: login.php');
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -76,9 +89,9 @@ session_start();
                     </p>
                 </div>
                 <div class="botoes-container">
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                         <input type="hidden" name="adicionar" value="true">
-                        <input type="hidden" name="produto_id" value="<?= $produto['id_produto'] ?>">
+                        <input type="hidden" name="id_produto" value="<?= $produto['id_produto'] ?>">
                         <button type="submit" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i></button>
                         <input type="number" name="qtd_produto" id="quantidade" value="1" min="1" max="10"
                             class="input-qtd-produto">
@@ -116,8 +129,29 @@ session_start();
                     <li><a href="sobre.php">Empresa</a></li>
                     <li><a href="app/views/compra/index.php">Venda</a></li>
                     <li><a href="app/views/compra/feedback.php">Feedbacks</a></li>
-                    <li><a href="app/views/produtos/">Cadastre um produto</a></li>
-                    <li><a href="cadastro.php">Sair</a></li>
+
+                    <?php
+
+                    if (!isset($_SESSION['permissoes']['vendedor'])) {
+                        $vendedor = null;
+                    } else {
+                        $vendedor = $_SESSION['permissoes']['vendedor'];
+                    }
+
+                    if ($vendedor == 1) {
+                        echo '<li><a href="app/views/produtos/">Cadastre um produto</a></li>';
+                    } elseif (isset($_SESSION['logado'])) {
+                        echo '<li><a href="app/views/usuario/vendedor.php">Torne-se um vendedor</a></li>';
+                    }
+                    ?>
+
+                    <?php
+                    if (isset($_SESSION['logado'])) {
+                        echo "<li><a href='app/views/usuario/logout.php'>Sair</a></li>";
+                    } else {
+                        echo "<li><a href='login.php'>Entrar</a></li>";
+                    }
+                    ?>
                 </ul>
             </div>
 

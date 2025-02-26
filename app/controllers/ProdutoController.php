@@ -1,8 +1,9 @@
 <?php
 
-require_once __DIR__.'/../models/ProdutoModel.php';
+require_once __DIR__ . '/../models/ProdutoModel.php';
 
-class ProdutoController {
+class ProdutoController
+{
     public $produtoModel;
 
     public function __construct()
@@ -20,14 +21,21 @@ class ProdutoController {
         $this->produtoModel->editarProduto($id);
     }
 
+    public function buscarProduto($id_produto)
+    {
+        return $this->produtoModel->buscarProduto($id_produto);
+    }
+
     public function deletarProduto($id)
     {
         $this->produtoModel->deletarProduto($id);
     }
 
-    public function listarProdutos() {
+    public function listarProdutos()
+    {
         return $this->produtoModel->listarProdutos();
     }
-};
+}
+;
 
 ?>

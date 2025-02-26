@@ -57,6 +57,42 @@ session_start();
             </thead>
             <tbody>
                 <!-- Os produtos serão carregados dinamicamente do banco de dados -->
+
+                <?php
+
+                require_once __DIR__ . '\app\controllers\CarrinhoController.php';
+                require_once __DIR__ . '/app/controllers/ProdutoController.php';
+
+                $produtos = new ProdutoController();
+
+                $carrinho = new CarrinhoController();
+                $carrinhoLista = $carrinho->buscarItens($_SESSION['id_usuario']);
+
+                foreach ($carrinhoLista as $item) {
+                    $produto = $produtos->buscarProduto($item['id_produto']);
+
+                    ?>
+                    <tr>
+                        <td><img src="public/img/produtos/<?= $produto['imagem_produto'] ?>" alt="" width="100px"></td>
+                        <td><?= $produto['nome_produto'] ?></td>
+                        <td>R$ <?= number_format($produto['preco_produto'], 2, ",", ".") ?></td>
+                        <td><?= $item['quantidade'] ?></td>
+                        <td><?= number_format(($item['quantidade']*$produto['preco_produto']), 2, ",", ".") ?></td>
+                        <td><a href="#" class="delete-btn"><i class="fa-solid fa-trash-can"></i></a></td>
+                    </tr>
+                    <?php
+
+                }
+
+                ?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>$$$$</td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
         <div class="cart-summary">

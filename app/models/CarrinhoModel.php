@@ -29,6 +29,12 @@ class CarrinhoModel
         $stmt->execute([$id_usuario, $id_produto]);
     }
 
+    public function buscarItens($id_usuario) {
+        $stmt = $this->pdo->prepare("SELECT id_produto, quantidade FROM carrinhos WHERE id_usuario = ?");
+        $stmt->execute([$id_usuario]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
 }
 
