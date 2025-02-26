@@ -1,28 +1,19 @@
 <?php
 
-require_once __DIR__.'/../models/AvaliacaoModel.php';
+require_once 'C:/Turma2/xampp/htdocs/verdant/app/models/AvaliacaoModel.php';
 
-class AvaliacaoController
-{
+class AvaliacaoController {
+    private $avaliacaoModel;
 
-    public $avaliacaoModel;
-    public function __construct()
-    {
+    public function __construct() {
         $this->avaliacaoModel = new AvaliacaoModel();
     }
-
-    public function criarAvaliacao($feedback, $nota)
-    {
-        $this->avaliacaoModel->criarAvaliacao($feedback,$nota);
+    public function criarAvaliacao($nome_cliente, $nome_produto, $feedback, $nota) {
+        $this->avaliacaoModel->criarAvaliacao($nome_cliente, $nome_produto, $feedback, $nota);
+    }   
+    public function listarAvaliacoes() {
+        return $this->avaliacaoModel->listarAvaliacoes();
     }
-
 }
 
-
-/* `id_avaliacao` int(11) NOT NULL,
-  `id_cliente` int(11) NOT NULL,
-  `feedback` text NOT NULL,
-  `nota` tinyint(5) NOT NULL,
-  `id_produto` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-*/
+?>

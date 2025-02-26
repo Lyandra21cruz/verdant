@@ -34,7 +34,7 @@ session_start();
         <a href="../../../index.php">INÍCIO</a>
         <a href="../../../sobre.php">EMPRESA</a>
         <a href="index.php">VENDA</a>
-        <a href="feedback.php">FEEDBACKS</a>
+        <a href="views/avaliacao.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
             echo "<a href='app/views/usuario/logout.php'><i class='fas fa-sign-in-alt' style='rotate: 180deg;'></i> SAIR</a>";

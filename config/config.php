@@ -14,10 +14,10 @@ class Config
         $this->pdo = null;
 
         try {
-            $this->pdo = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->db_name, $this->username, $this->password);
-            $this->pdo->exec("set names utf8");
-        } catch (PDOException $exception) {
-            echo "Connection error: " . $exception->getMessage();
+            $pdo = new PDO('mysql:host=localhost;dbname=verdant', 'root', ''); 
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+        } catch (PDOException $e) {
+            die("Erro na conexão: " . $e->getMessage()); 
         }
 
         return $this->pdo;
