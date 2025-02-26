@@ -17,7 +17,7 @@ session_start();
 <body>
     <header class="header">
         <div class="logo-container">
-            <a href="../cadastro.php"> <img src="verdantp/public/img/download.png" alt="Verdant Logo" class="logo"></a>
+            <a href="../cadastro.php"> <img src="public/img/download.png" alt="Verdant Logo" class="logo"></a>
         </div>
         <h1 class="brand-name">VERDANT</h1>
         <div class="menu-icon" onclick="toggleMenu()">
@@ -29,21 +29,17 @@ session_start();
     <div class="menu">
         <a href="index.php">INÍCIO</a>
         <a href="sobre.php">EMPRESA</a>
-        <a href="verdantp/compra/index.php">VENDA</a>
-        <a href="verdantp/compra/feedback.php">FEEDBACKS</a>
+        <a href="app/views/compra/index.php">VENDA</a>
+        <a href="app/views/compra/feedback.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
             echo "<a href='app/views/usuario/logout.php'><i class='fas fa-sign-in-alt' style='rotate: 180deg;'></i> SAIR</a>";
         } else {
             echo "<a href='login.php'><i class='fas fa-sign-in-alt'></i> ENTRAR</a>";
         }
-        ?></a>
-        </a>
-
-
-        </a>
-
+        ?>
     </div>
+
     <div class="linha-verde"></div>
     <br>
 
@@ -53,7 +49,7 @@ session_start();
         <div class="linha-produtos">
             <div class="corpoproduto">
                 <div class="imgproduto">
-                    <img src="verdantp/public/img/produto-1.jpg" alt="Bolsa Sustentável" class="produtominiatura">
+                    <img src="app/views/public/img/produto-1.jpg" alt="Bolsa Sustentável" class="produtominiatura">
                 </div>
                 <div class="titulo">
                     <p>Bolsa Sustentável</p>
@@ -68,41 +64,52 @@ session_start();
                         <input type="hidden" name="adicionar" value="true">
                         <input type="hidden" name="produto_id" value="1">
                         <button type="submit" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i></button>
-                        <input type="number" name="qtd_produto" id="quantidade" value="1" min="1" max="10" class="input-qtd-produto">
+                        <input type="number" name="qtd_produto" id="quantidade" value="1" min="1" max="10"
+                            class="input-qtd-produto">
                     </form>
                 </div>
 
             </div>
 
-            <?php 
-            require_once'../verdantp/app/models/ProdutoModel.php';
+            <!-- <?php
+            require_once '/app/models/ProdutoModel.php';
             $produto = new ProdutoController();
             $produtos = $produto->listarProdutos();
 
-                foreach ($produtos as $produto) {
-                    ?> <div class="corpoproduto">
-                    <div class="imgproduto">
-                        <img src="verdantp/public/img/<?= $produto['imagem_produto'] ?>" alt="<?= $produto['nome_produto'] ?>" class="produtominiatura">
-                    </div>
-                    <div class="titulo">
-                        <p><?= $produto['nome_produto'] ?></p>
-                        <h2>R$ <?= $produto['preco_produto'] ?></h2>
-                    </div>
-                    <div class="descricao">
-                        <p><?= $produto['descricao_produto'] ?></p>
-                    </div>
-                    <div class="botoes-container">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
-                            <input type="hidden" name="adicionar" value="true">
-                            <input type="hidden" name="produto_id" value="<?= $produto['id_produto'] ?>">
-                            <button type="submit" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i></button>
-                            <input type="number" name="qtd_produto" id="quantidade" value="1" min="1" max="10" class="input-qtd-produto">
-                        </form>
-                    </div>
-    
+            foreach ($produtos as $produto) {
+                ?>
+            <div class="corpoproduto">
+                <div class="imgproduto">
+                    <img src="public/img/<?= $produto['imagem_produto'] ?>"
+                        alt="<?= $produto['nome_produto'] ?>" class="produtominiatura">
                 </div>
-                <?php };
-            ?>
+                <div class="titulo">
+                    <p>
+                        <?= $produto['nome_produto'] ?>
+                    </p>
+                    <h2>R$
+                        <?= $produto['preco_produto'] ?>
+                    </h2>
+                </div>
+                <div class="descricao">
+                    <p>
+                        <?= $produto['descricao_produto'] ?>
+                    </p>
+                </div>
+                <div class="botoes-container">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+                        <input type="hidden" name="adicionar" value="true">
+                        <input type="hidden" name="produto_id" value="<?= $produto['id_produto'] ?>">
+                        <button type="submit" class="btn-comprar"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <input type="number" name="qtd_produto" id="quantidade" value="1" min="1" max="10"
+                            class="input-qtd-produto">
+                    </form>
+                </div>
+
+            </div>
+            <?php }
+            ;
+            ?> -->
 
             <div class="corpoproduto">
                 <div class="imgproduto">
@@ -385,8 +392,8 @@ session_start();
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="sobre.php">Empresa</a></li>
-                    <li><a href="verdantp/compra/index.php">Venda</a></li>
-                    <li><a href="verdantp/compra/feedback.php">Feedbacks</a></li>
+                    <li><a href="app/views/compra/index.php">Venda</a></li>
+                    <li><a href="app/views/compra/feedback.php">Feedbacks</a></li>
                     <li><a href="cadastro.php">Sair</a></li>
                 </ul>
             </div>

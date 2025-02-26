@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Cadastro - VERDANT</title>
+    <title>Entre - VERDANT</title>
 </head>
 
 <body class="index">
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <br><br>
     <div class="cadastro">
-        <h1>CADASTRAR</h1>
+        <h1>ENTRAR</h1>
         <div class="form-container">
             <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                 <input type="email" name="email" placeholder="Email" required>

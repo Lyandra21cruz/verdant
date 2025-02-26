@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,10 +37,16 @@
 
     <nav class="menu">
         <a href="../../../index.php">INÍCIO</a>
-        <a href="../../sobre.php">EMPRESA</a>
+        <a href="../../../sobre.php">EMPRESA</a>
         <a href="index.php">VENDA</a>
         <a href="feedback.php">FEEDBACKS</a>
-        <a href="../../cadastro.php"><i class="fas fa-sign-in-alt"></i> ENTRAR/SAIR</a>
+        <?php
+        if (isset($_SESSION['logado'])) {
+            echo "<a href='app/views/usuario/logout.php'><i class='fas fa-sign-in-alt' style='rotate: 180deg;'></i> SAIR</a>";
+        } else {
+            echo "<a href='login.php'><i class='fas fa-sign-in-alt'></i> ENTRAR</a>";
+        }
+        ?>
     </nav>
 
     <div class="linha-verde"></div>
