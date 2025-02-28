@@ -15,6 +15,8 @@ class UsuarioModel
     {
         $stmt = $this->pdo->prepare("INSERT INTO usuarios (nome_usuario, email, senha, vendedor, admin) VALUES (?, ?, ?, ?, ?)");
         $stmt->execute([$nome_usuario, $email, $senha, $vendedor, 0]);
+
+        header("location: login.php");
     }
 
     public function editarUsuario($id)
