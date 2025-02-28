@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome_cliente'], $_POS
         <h2 class="brand-name">VERDANT</h2>
         <div class="menu-icon" onclick="toggleMenu()">
             <div></div><a href="../../../carrinho.php"><i class="fa-solid fa-cart-shopping fa-2xl" style='color: #fff' ;></i></a>
-            <div class="quantidade-carrinho" id="quantidade-carrinho"><?= $_SESSION['qtd-carrinho'] ?></div>
+            <div class="quantidade-carrinho" id="quantidade-carrinho"><?= $_SESSION['qtd-carrinho'] ?? 0 ?></div>
         </div>
     </header>
 

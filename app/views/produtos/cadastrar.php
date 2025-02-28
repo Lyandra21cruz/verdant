@@ -2,7 +2,7 @@
 
 session_start();
 
-$id_usuario = $_SESSION["id_usuario"]["id_usuario"];
+$id_usuario = $_SESSION["id_usuario"];
 
 
 
