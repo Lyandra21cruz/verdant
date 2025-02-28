@@ -24,7 +24,7 @@ session_start();
         </div>
         <h1 class="brand-name">VERDANT</h1>
         <div class="menu-icon" onclick="toggleMenu()">
-            <div></div><a href="carrinho.php"><i class="fa-solid fa-cart-shopping fa-2xl" style='color: #fff' ;></i></a>
+            <div></div><a href="../../../carrinho.php"><i class="fa-solid fa-cart-shopping fa-2xl" style='color: #fff' ;></i></a>
             <div class="quantidade-carrinho" id="quantidade-carrinho"></div>
         </div>
     </header>
@@ -50,7 +50,7 @@ session_start();
             <h1>DADOS DO COMPRADOR</h1>
 
             <section class="checkout">
-                <form class="checkout-form">
+                <form class="checkout-form" action="finalizar.php" method="POST">
                     <div class="form-group">
                         <label for="nome">Nome Completo:</label>
                         <input type="text" id="nome" name="nome" required>

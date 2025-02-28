@@ -2,6 +2,10 @@
 
 session_start();
 
+if (!isset($_SESSION['logado'])) {
+    header('location: login.php');	
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -67,7 +71,7 @@ session_start();
 
                 $carrinho = new CarrinhoController();
                 $carrinhoLista = $carrinho->buscarItens($_SESSION['id_usuario']);
-
+                $total = 0;
                 foreach ($carrinhoLista as $item) {
                     $produto = $produtos->buscarProduto($item['id_produto']);
 
@@ -81,22 +85,15 @@ session_start();
                         <td><a href="#" class="delete-btn"><i class="fa-solid fa-trash-can"></i></a></td>
                     </tr>
                     <?php
+                    $total+= $item['quantidade']*$produto['preco_produto'];
 
                 }
 
                 ?>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>$$$$</td>
-                    <td></td>
-                </tr>
             </tbody>
         </table>
         <div class="cart-summary">
-            Total: <span>R$ 0,00</span>
+            Total: <span>R$ <?= number_format($total, 2, ",", "."); ?></span>
         </div>
         <div class="payment-methods">
             <h3>Formas de Pagamento</h3>
