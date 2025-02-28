@@ -2,6 +2,11 @@
 
 session_start();
 
+require_once __DIR__.'\app\controllers\CarrinhoController.php';
+
+$carrinho = new CarrinhoController();
+$_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
+
 if (!isset($_SESSION['logado'])) {
     header('location: login.php');	
 }
@@ -26,7 +31,7 @@ if (!isset($_SESSION['logado'])) {
         <h1 class="brand-name">VERDANT</h1>
         <div class="menu-icon" onclick="toggleMenu()">
             <div></div><a href="carrinho.php"><i class="fa-solid fa-cart-shopping fa-2xl" style='color: #fff' ;></i></a>
-            <div class="quantidade-carrinho" id="quantidade-carrinho"></div>
+            <div class="quantidade-carrinho" id="quantidade-carrinho"><?= $_SESSION['qtd-carrinho'] ?></div>
         </div>
     </header>
 
