@@ -82,7 +82,7 @@ if (!isset($_SESSION['logado'])) {
                         <td>R$ <?= number_format($produto['preco_produto'], 2, ",", ".") ?></td>
                         <td><?= $item['quantidade'] ?></td>
                         <td><?= number_format(($item['quantidade']*$produto['preco_produto']), 2, ",", ".") ?></td>
-                        <td><a href="#" class="delete-btn"><i class="fa-solid fa-trash-can"></i></a></td>
+                        <td><a href="deletarItem.php?id_produto=<?=$item['id_produto']?>" class="delete-btn"><i class="fa-solid fa-trash-can"></i></a></td>
                     </tr>
                     <?php
                     $total+= $item['quantidade']*$produto['preco_produto'];

@@ -25,7 +25,7 @@ class CarrinhoModel
 
     public function deletarItemCarrinho($id_usuario, $id_produto)
     {
-        $stmt = $this->pdo->prepare("DELETE * FROM carrinhos WHERE id_usuario = ?, id_produto = ?");
+        $stmt = $this->pdo->prepare("DELETE FROM carrinhos WHERE id_usuario = ? AND id_produto = ?");
         $stmt->execute([$id_usuario, $id_produto]);
     }
 

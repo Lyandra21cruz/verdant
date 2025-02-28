@@ -26,7 +26,8 @@ class ProdutoModel
 
     public function deletarProduto($id)
     {
-
+        $stmt = $this->pdo->prepare("DELETE FROM produtos WHERE id_produto = ?");
+        $stmt->execute([$id]);
     }
 
     public function buscarProduto($id_produto)
