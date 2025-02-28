@@ -31,6 +31,10 @@ class CarrinhoController
         return $this->carrinhomodel->buscarItens($id_usuario);
     }
 
+    public function buscarTotal($id_usuario) {
+        return $this->carrinhomodel->buscarTotal($id_usuario);
+    }
+
 }
 
 ?>

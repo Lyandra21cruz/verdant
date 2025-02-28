@@ -2,6 +2,12 @@
 
 session_start();
 
+require_once __DIR__.'\app\controllers\CarrinhoController.php';
+
+$carrinho = new CarrinhoController();
+$_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
+
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_SESSION['logado'])) {
         if ($_POST["adicionar"] == true) {
@@ -35,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <h1 class="brand-name">VERDANT</h1>
         <div class="menu-icon" onclick="toggleMenu()">
             <div></div><a href="carrinho.php"><i class="fa-solid fa-cart-shopping fa-2xl" style='color: #fff' ;></i></a>
-            <div class="quantidade-carrinho" id="quantidade-carrinho"></div>
+            <div class="quantidade-carrinho" id="quantidade-carrinho"><?= $_SESSION['qtd-carrinho'] ?></div>
         </div>
     </header>
 
@@ -43,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <a href="index.php">INÍCIO</a>
         <a href="sobre.php">EMPRESA</a>
         <a href="app/views/compra/index.php">VENDA</a>
-        <a href="app/views/compra/feedback.php">FEEDBACKS</a>
+        <a href="app/views/avaliacao/avaliacao.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
             echo "<a href='app/views/usuario/logout.php'><i class='fas fa-sign-in-alt' style='rotate: 180deg;'></i> SAIR</a>";

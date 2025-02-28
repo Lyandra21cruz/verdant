@@ -1,5 +1,5 @@
 <?php
-require_once('config\config.php');
+require_once('C:\Turma2\xampp\htdocs\verdant\config\config.php');
 
 class CarrinhoModel
 {
@@ -29,12 +29,22 @@ class CarrinhoModel
         $stmt->execute([$id_usuario, $id_produto]);
     }
 
-    public function buscarItens($id_usuario) {
+    public function buscarItens($id_usuario)
+    {
         $stmt = $this->pdo->prepare("SELECT id_produto, quantidade FROM carrinhos WHERE id_usuario = ?");
         $stmt->execute([$id_usuario]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function buscarTotal($id_usuario)
+    {
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) AS total FROM carrinhos WHERE id_usuario = :id_usuario");
+        $stmt->bindParam(':id_usuario', $id_usuario, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['total'] ?? 0;
+    }
 
 }
 
