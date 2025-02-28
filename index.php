@@ -2,24 +2,31 @@
 
 session_start();
 
-require_once __DIR__.'\app\controllers\CarrinhoController.php';
+if (isset($_SESSION['logado'])) {
+    require_once __DIR__ . '\app\controllers\CarrinhoController.php';
 
-$carrinho = new CarrinhoController();
-$_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
+    $carrinho = new CarrinhoController();
+    $_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
+}
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_SESSION['logado'])) {
+        require_once __DIR__ . '\app\controllers\CarrinhoController.php';
+
+        $carrinho = new CarrinhoController();
+        $_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
         if ($_POST["adicionar"] == true) {
             require_once __DIR__ . '\app\controllers\CarrinhoController.php';
             $carrinho = new CarrinhoController();
-    
+
             $carrinho->adicionarItemCarrinho($_SESSION['id_usuario'], $_POST['id_produto'], $_POST['qtd_produto']);
         }
     } else {
         header('location: login.php');
     }
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <body>
     <header class="header">
         <div class="logo-container">
-         <img src="public/img/download.png" alt="Verdant Logo" class="logo">
+            <img src="public/img/download.png" alt="Verdant Logo" class="logo">
         </div>
         <h1 class="brand-name">VERDANT</h1>
         <div class="menu-icon" onclick="toggleMenu()">
@@ -48,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div class="menu">
         <a href="index.php">INÍCIO</a>
         <a href="sobre.php">EMPRESA</a>
-        <a href="app/views/compra/index.php">VENDA</a>
         <a href="app/views/avaliacao/avaliacao.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
@@ -117,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     </div>
     </div>
-    <br><br><br><br><br>    <br><br><br><br><br>
+    <br><br><br><br><br> <br><br><br><br><br>
 
     <br>
     <footer>

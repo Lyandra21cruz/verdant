@@ -37,7 +37,6 @@ $_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
     <div class="menu">
         <a href="../../../index.php">INÍCIO</a>
         <a href="../../../sobre.php">EMPRESA</a>
-        <a href="index.php">VENDA</a>
         <a href="../avaliacao/avaliacao.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
@@ -57,12 +56,12 @@ $_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
             <section class="checkout">
                 <form class="checkout-form" action="finalizar.php" method="POST">
                     <div class="form-group">
-                        <label for="nome">Nome Completo:</label>
+                        <label for="nome">Nome completo:</label>
                         <input type="text" id="nome" name="nome" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="pin">PIN do Produto:</label>
+                        <label for="pin">Telefone para contato:</label>
                         <input type="text" id="pin" name="pin" required>
                     </div>
 

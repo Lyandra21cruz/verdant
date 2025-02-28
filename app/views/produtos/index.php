@@ -33,7 +33,6 @@ session_start();
     <div class="menu">
         <a href="../../../index.php">INÍCIO</a>
         <a href="../../../sobre.php">EMPRESA</a>
-        <a href="index.php">VENDA</a>
         <a href="feedback.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {

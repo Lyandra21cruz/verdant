@@ -44,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome_cliente'], $_POS
     <div class="menu">
         <a href="../../../index.php">INÍCIO</a>
         <a href="../../../sobre.php">EMPRESA</a>
-        <a href="index.php">VENDA</a>
         <a href="../avaliacao/avaliacao.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {

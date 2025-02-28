@@ -2,10 +2,12 @@
 
 session_start();
 
-require_once __DIR__.'\app\controllers\CarrinhoController.php';
+if (isset($_SESSION['logado'])) {
+    require_once __DIR__ . '\app\controllers\CarrinhoController.php';
 
-$carrinho = new CarrinhoController();
-$_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
+    $carrinho = new CarrinhoController();
+    $_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
+}
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +38,6 @@ $_SESSION['qtd-carrinho'] = $carrinho->buscarTotal($_SESSION['id_usuario']);
     <div class="menu">
         <a href="index.php">INÍCIO</a>
         <a href="sobre.php">EMPRESA</a>
-        <a href="app/views/compra/index.php">VENDA</a>
         <a href="app/views/compra/feedback.php">FEEDBACKS</a>
         <?php
         if (isset($_SESSION['logado'])) {
